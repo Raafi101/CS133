@@ -1,0 +1,1000 @@
+Adding a dedicated audio (or physics) processing chip today seems more likely to be an organizational fault than a cohesive system design. Centralized compute resources are more flexible and easier to develop for. https://twitter.com/KeemaMr/status/1236299017446981632 …
+I usually allow myself one shot at irrational optimism with complex new code -- Maybe it will Just Work! After some new sequence learning code completely failed at predicting spectrograms (even I wasn't optimistic enough to try videos), I fell back to "OK, lets try a sine wave"
+Clean sine wave audio does not localize well -- the HRTF needs a variety of frequencies to give you a good sense of spatialization. This has real world relevance when trying to locate a beeping fire alarm in a large house. They should use a richer sound!
+There was an upper limit to the height of the compiled wall scalers in Cat3D, so turning near walls caused a weird warping effect. For Wolf3D, I spread the finite number of scalers out at the high end, so big squares got a little ragged, but approximately the right scale. https://twitter.com/KaiHolwerda/status/1235200896654598145 …
+I have read about how important “not moving” is for quality fMRI and other scans. If there is video of the subject, could these scans be cleaned up with modern computer vision pose estimation? The brain sloshes around in transient movement, but there might still be value.
+Does the eye progressively defocus away from the fovea such that the reduced spatial resolution gets a band limited signal, or does aliasing have to be dealt with in neural software?
+Sometimes I wonder how much of my advantage over other people is just insisting on a good 8 hours of sleep a day. There are still 112 hour left in the week! https://twitter.com/phirephoenix/status/1232327593526988801 …
+That is plausible in the right combination of scene, renderer, and system, which is an interesting observation!
+Here is a talk I gave internally at the end of 2015 around "antifragile" idea generation, along with examples of my thought process. Thanks @boztank for getting this cleared for public release! https://www.youtube.com/watch?v=dSCBCk4xVa0&feature=youtu.be …
+It is really interesting how much your eyes move around while thinking, even when you are ignoring the environment. REM sleep is the obvious one, but just think about a photo with multiple people and attend to each one, noting that your eyes move a little as you do.
+It turns out that a lock pick is the appropriate tool for extracting a key broken off in a lock.
+I am also enjoying Old Man Picard, the first Trek that I have lasted more than a couple episodes on for ages.
+I really enjoyed this book:  https://www.amazon.com/Three-Parts-Dead-Craft-Sequence-ebook/dp/B0085UEQDO/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=1582379342&sr=8-1 … Fantasy has been kind of dry for me lately, but this has a good angle.
+It bugs me a little that the gradient calculated by backprop in a neural network isn't actually the "steepest descent", because the partial derivatives between layers interact. Of course, optimizers are adapting everything anyway, but I wonder if there might be a structural hint.
+How would you imagine that working for someone like me? Cloud vendors refuse to spawn larger clusters without a government approval? I would not be supportive.
+A person can be most uniquely valuable as a result of their skills and experience on a project measured in months, rather than weeks or years. Too short, and the leverage is minimized. Too long, and many other smart people could also get up to speed.
+Again on photovoltaic Mad Max, I can imagine just pre-apocalypse someone making a program to scan google maps aerial views to identify all the buildings with solar panels as raider targets.
+\ and just doing int8 mads with sum+=a*b, and it probably isn't ordered right for L1 cache. I would expect putting similar effort into a multithreaded AVX512 version with optimal layout on CPU could get many 100x, and perhaps 1000x faster.
+\ I was trying to extract maximum performance from the int8 tensor operations and GPU memory bandwidth, so everything is pre-tiled and transposed as necessary to make the GPU happy. The CPU version is doing tons of indexing calculations to match the tensor fragment layouts \
+I have a cuda function that is 100,000 times faster on GPU than the C verification code running on CPU. 14 milliseconds on GPU vs 22 minutes on CPU (release build single thread). This has everything stacked for the GPU, but still, I have never seen a ratio that extreme before. \
+The opinion of a rich individualist like me is immediately dismissed as obviously self interested and without any moral standing, but that should add moral weight to the opinion of those who are willing to suffer harm for a belief. Instead, they are seen as dysfunctional.
+I see other smart people similarly say “how can they vote against their own economic self interest?” but I feel as baffled as you appear to feel — can you not entertain the notion that someone could care about a principle that is contrary to their current economic self interest?
+Oh, that would make sense. Not an “audio chip” or even “audio block”, but just an option to partition the CUs.
+Agreed — precise software emulation often strains against the limits of a single generation of improvement.
+I got along well with @mljmljmlj the little bit we interacted at Oculus.
+That was an additional issue, and it was intentional at the time, but turned out to be misguided. I was thinking about the old dungeon games like Wizardry, where turning in place still let you see the doors to your sides, which wouldn't happen just rotating in the center.
+I thought this book missed a critical point — “evolution favors fitness over truth” is valid, but if you need 500 warnings, you are better off with “software” processing something related to truth versus individual bespoke sensors. The smartphone effect over specialized devices. https://twitter.com/rainabba/status/1232895736389357568 …
+I’m sure I could make a better presentation with PPT if I put the weeks of prep into it that some people do, but I just don’t have weeks to devote to it. I feel a bit guilty about it, but it usually comes down to a low-prep talk or no talk.
+I'm kind of resigned to not getting back into aerospace anytime soon -- AGI isn't going to be a short project.
+I did the entire port, but don’t remember the details. I think the actual link wasn’t very reliable, and I didn’t have time to work out any kind of error correction.
+Yes, I didn’t try 128 bit arithmetic, so my results weren’t useful for much of anything. 16 bit verts with no epsilons could have been used for real!
+Yeah, all the production optimizers are adding momentum, individually scaling the rates, and so on, so it probably doesn't mean anything, but noting that my intuition about the matrix of partials can be wrong with some architectures was a learning experience for me.
+If only one weight is changed, the partial derivative is fine, but that node might be an input to a million other nodes that also had their weight tweaked, which can make for an unexpectedly large compounding change in some cases.
+I still work there part time. No, I don't expect a general purpose tracking peripheral any time soon.
+It would shift shorter with less unique skills. In a timeframe of hours, just knowing where things are is critical, but that is easily and quickly learned by others. There may be abstract mathematicians that are many years removed from their closest peers.
+I started with an X/Y graph like you learn in algebra, then added Z as altitude. Looking down the x axis is protractor angle 0.
+From an engineering standpoint, the power density of liquid fuels is still quite appealing.
+It is a sparse int8 neural layer using tensor cores and optimal layout. My rule of thumb is that fully optimized GPU card is usually only 10x fully optimized CPU socket for most problems. This is just validation code on CPU, not an attempt to be fast, but still a shocking number.
+I had four total: 328 (added turbo), Testarossa (added turbos and nitrous), f40 (left it alone), f50 (added turbos). I like my Tesla P100D more than any of them.
+I'm designing my systems around saturating the GPUs.
+I donated my #30 Roadster to the LeMay Auto Museum in Tacoma. https://twitter.com/darklordjames/status/1228758060211957761 …
+Do you say that from personal experience? I have had a Tesla since the original roadster, and there have been exactly zero drivetrain problems in the entire time.
+The Mad Max post-apocalyptic muscle car esthetic needs to be updated — a bunch of jacked up Teslas recharging from solar panel farms works a lot better than a hacked together oil refinery.
+Cacheline set associativity ways -- 2 way, 4 way, etc. Processing parallel structures that all line up modulo the cache size can sometimes be catastrophically bad.
+Occasionally my instinct to make all buffers a nice power of two is counterproductive in random C++ code due to cache usage and way collisions, but CUDA really wants you to Align All The Things.
+I wonder if potato chips would have an unlimited shelf life if stored in an oxygen and moisture free atmosphere below freezing temperature. If not, what would be the decay mechanism?
+\ The null hypothesis is that people are Fooled By Randomness.
+\ with the phones on the table. After ten minutes, the phones are picked up, turned on, and checked for ads. I would bet money that iOS phones show no evidence of having “heard” the terms. I would also be surprised if it was actually common on Android. \
+Let’s be scientific and run experiments. @boztank said unequivocally that FB does not do this, but it would not surprise me if there were Android apps that did listen surreptitiously and sold data. The claim from someone in that thread was that a group of people could put \ https://twitter.com/thezedwards/status/1226683515716030465 …
+I have two Anki flash cards with the same acronym: MDP in OpenMAX video context is Mobile Display Processor, but in AI context it is Markov Decision Process.
+I really need to get the old Armadillo Aerospace site back online some day. https://twitter.com/RocketRundown/status/1226483513471356929 …
+Our city’s water saving tips said that a dripping faucet could waste up to 20 gallons of water a day. That sounded high to me, but a stopwatch and scale test worked out to 15 gallons a day, and I doubt I hit the maximal drop size. Learned something!
+Art and technology together is a pretty natural grouping, but combining all of them is clearly a poor fit.
+Engineering is the disciplined production of technology, science allows engineering to extrapolate beyond the results of trial and error, and math forces clarity and test ability in science. There is a thread to tie STEM together.
+Extending STEM in education to STEAM by adding arts to science, technology, engineering, and math is such a blatant and irritating category error.
+The talking dog collars from the movie up are probably more possible than most people think if you are willing to do brain implants. Neuralink should hook their test animals up to a human vocal tract simulator like  https://dood.al/pinktrombone/
+Running some numbers, rocket engines get above 10 MW/m^2 heat flex, which would be about 10 KW on the surface area of an Nvidia V100 die.
+It is generally considered that the inability to cool modern processors forces limitations in the power draw and therefore performance, but it seems like there should still be lots of headroom if you take cooling really seriously, as you would with a rocket combustion chamber.
+Update: Contact established!
+\ The pitch is that perhaps the mission to "help children everywhere grow smarter, stronger, and kinder" may apply to AI as well. No response, so I am wondering if anyone knows the right person to nudge...
+If an AI is going to grow up watching a lot of television, there are likely better and worse choices for material. I sent a request to the partnerships email for @SesameWorkshop to check the availability of the full back catalog of Sesame Street for research purposes. \
+I’ll be doing a talk Saturday (2/1) at the Frontiers of Flight Museum in Dallas from 5-7 pm on STEM fields. Stop by if you are in the area!
+But they are a fraction of the throw of the current controllers. Mimicking the feel of professional equipment is a good plan, though!
+Changing this now would probably be too traumatic, but I tend to think that VR controllers would be better with a crisp, binary trigger instead of a squishy analog one. Games like Audica and Pistol Whip would be objectively improved. Sound off if you would hate that.
+I definitely favored 360 over PS3 development — more symmetric CPU was better than CPU + cell from a simplicity standpoint. You can take the argument all the way back to GPUs — we have sort of forgotten how nice just drawing pixels with the CPU was...
+Console vendors made conscious decisions to produce challenging hardware that would let high end developers get higher performance, even though it would be worse for the majority of potential developers. If you think that having the single most impressive title is critical, or \
+I was puzzled by this (reading about SPSA): "uniform and normal distributions do not satisfy the critical finite inverse moment condition" Later, I figured out that it was just because they would cause divide-by-zero problems, unlike the strictly -1/1 Bernoulli distribution.
+Game dev tech is still (literally!) awesome, but it is mature and powerful enough, with a large enough body of practitioners, that I don’t worry about significant opportunities being missed.
+Nvidia should sort out the firmware and drivers to allow cards to be chained by NVLink alone, without PCIe, bypassing all the bios, chipset, and OS issues. A ring of hundreds of GPUs would serve many applications that don't need a lot of host bandwidth.
+\ monopropellant. You would know after a few million $ of engine development (and many, many explosions) if it was worth going full scale. Chasing a conventional path is unlikely to provide meaningful competitive advantage over SpaceX.
+\ perfectly and no mistakes were made along the way, a small orbital launch might have been made for $20M, but that isn't at all likely. If I took another stab at it today, I would forsake reusability and try to build an expendable SSTO using crazy-dangerous mixed cryogenic \
+Not much has changed that would make it materially easier today than it was for SpaceX. There is more chance involved than most would like to admit -- their first launch could have made it, and the project cost would have been much lower. If everything had gone \ https://twitter.com/michael_nielsen/status/1221233771116056576 …
+Given the ever-widening compute / bandwidth gap, maybe we should throw a little bit of hardware at high performance "random" sequence generation. You can do a lot with seeded randoms if you are up against the memory wall.
+Considered horizontally flipping my video data set for more variety, but realized that would be a good way to train a dyslexic AI.
+I had forgotten the name of this algorithm, and had to search around a bit:  https://en.wikipedia.org/wiki/Reservoir_sampling … Useful for sampling from distributions of initially unknown size or unknown weighted sums.
+I don’t have a well informed opinion — details matter, and I don’t know them.
+If someone wants to put some rigor in my “order of magnitude” WAG, calculate the cost of mining Ethereum on AWS GPU instances.
+Crypto mining is a nice, public benchmark of what cost-optimized computation can do. For GPU workloads that could run on those systems
+Start a VR game studio with @notch . That sounds like a high outcome variance prospect. https://twitter.com/notch/status/1219238505731252228 …
+I never had a mentor, so I don’t really know much about it. Learning everything myself contributes to my confidence in being able to learn anything, but good tips certainly could have saved time!
+Yes. Any Life’s Work worth talking about has involved significant sacrifices in the name of focusing on it, but I would expect actual suffering to be counterproductive. I haven’t suffered in any systematic way in the name of my obsessions.
+... comes when strictly using the web for quality reference material, but it would be a discipline challenge to avoid all the people and fluff vying for attention. It is easier to just say “none of that at all” than make constant judgements.
+... more focused, but not magically so. The next day, when I resumed checking twitter / email / workplace / messenger, it was clear that it consumed a good chunk of the day, but I had my knowledge-of-the-world reference library back. Peak research productivity for me probably ...
+I was doing a remote study/think time this week, and I tried a “no screen time day” as an experiment, restricting myself to printed books and papers. It was inconclusive. I missed finding instant answers and chasing references at least a dozen times during the day. I was ...
+A SciFI book about an inadvertently sentient computer program from 1977. Similar vein to Hartling’s Avogadro books 35 years later. Not bad for the time — owning all the IBM 360s. pic.twitter.com/12DbUaYgiY
+Interpolated 60 FPS is a nice feature, but someone should break down and actually change the code to let it run at unlocked frame rates and G-sync off the mouse update at 250 FPS on PC. https://twitter.com/digitalfoundry/status/1217809479175041024 …
+I find numpy’s fromfile and tofile very refreshing — no configuring a serializer to pipe into an abstract data store, just efficiently move a buffer to or from a file, byte order be damned.
+A visible eye floater gives a nice demonstration of all the actual motion our eyes do, while still letting us perceive an immobile world.
+It was an internal Facebook talk. Maybe @boztank could clear it for public release... I found “antifragile” to be a useful framework, and I am planning on re-reading all of @nntaleb ‘s work now through the lens of artificial intelligence.
+My machine learning education has progressed to the point where I lose sleep tossing around a “brilliant” idea, only to find the next day that it doesn’t actually work. This is great! I talked about this a few years ago: https://amasad.me/carmack
+The $30 thumb drives were a fraud. They show up as 1TB, but lsusb reports it as a 4GB USB 2 device. I should have bought a $45 1TB hard drive. Amusingly, the quick test program I wrote was reporting all-good, because each 1GB file written was still in cache when verified. https://twitter.com/ID_AA_Carmack/status/1215021852202012672 …
+I recently started working in python, and I kind of like the indent scope bit — I tend to think the “freedom to have your own style” in many languages is counterproductive.
+Analyzing patients with various brain injuries has contributed a lot to science; do any of them get to basically make a career out of being professional test subjects?
+I cleaned the contacts on some old NES cartridges a couple weeks ago, and I really should have worn gloves -- the cleaning solution chewed up my fingerprints enough that my iPad fingerprint sensor still doesn't recognize them today.
+The 1TB ones from Amazon. If they don't actually work, Twitter will hear about it on Friday! :-)
+Just ordered a couple 1TB thumb drives for $30 each. I still find myself awestruck by tech progress -- I desperately wanted a 10MB hard drive for my IIGS as a teen, but didn't have the $399. One million times cheaper per byte, one thousand times faster, and 100 times smaller now.
+We do not know how to make the movie-magic AR glasses at any price today, but the problems are being actively worked on.
+No, by simple economics. Companies need to pay for their electricity in every part of the value chain. Netflix and the telcos are audited public companies, and they couldn’t exist with anything near those costs.
+Sigh. 1.6 Kg of CO2 = 3.5 Kw/h with the US generation mix, so to consume that in a half hour implies that end-to-end streaming consumes 7000 watts, which is off by well over an order of magnitude. We can quibble about accounting with 2x, but 10x is just BS. https://twitter.com/bigthink/status/1213315191338938368 …
+I run it once or twice a week, but I can’t concentrate on audiobooks while running, so it isn’t multitasking.
+I made a lifestyle change last year, adding a 3+ mile walk every day, rain or shine. It did take a bit out of my work hours, but covering 39 audio books and Great Courses has been valuable.
+Note that just having random people play is only a bit helpful. Ideally you need to personally watch them suffer through all your bad decisions. Full recorded sessions are next best.
+I was actually thinking about that just yesterday — the older I get, the more laden with gravitas “Live long and prosper” gets. LLAP, everyone! https://twitter.com/SylonZero/status/1212089332363923458 …
+Today is my 20th wedding anniversary!  https://www.facebook.com/permalink.php?story_fbid=2595527504015084&id=100006735798590 …
+Inferences-per-second for different batch sizes on resnet-18 / Titan RTX. Single batch, on-line use is only 3% of peak performance. The last 30% of perf increase all shows as "98% cuda utilization". It is an interesting question to consider what convnet architecture you would \ pic.twitter.com/GzRIWcQIOD
+This is in the context that I am using python daily now in the AI space. Lots of things are great, but actually executing a lot of python code, as opposed to stringing together invocations of native code, is quite slow.
+JAVA or C#would also be close, and there are good reasons to prefer those over C++ for servers. Many other languages would also be up there, the contrast is with Really Slow (but often productive and fun) languages.
+My formative memory of Python was when the Quake Live team used it for the back end work, and we wound up having serious performance problems with a few million users. My bias is that a lot (not all!) of complex “scalable” systems can be done with a simple, single C++ server.
+Optimization is almost always virtuous when directed at large numbers of consumers, but for in-house applications it can be a poor use of time -- multithreaded, pipelined raw IO striped over multiple SATA channels versus just buying a fast NVMe drive. Still fun, though!
+I am not talking about dynamic difficulty, but about rewarding choices that humans tend to make that aren’t expected utility maximizing.
+Psychological decision making biases and framing effects are exploited to extract money from people, but I wonder if they could be applied to make a game feel surprisingly good by rewarding the “incorrect” decisions people tend to make.
+I am an advocate for the benefits of functional programming, but I do tend to think that there is something deeper than just a cultural bias towards imperative programming in people — imperative actions are probably more broadly “natural”.
+The imperative, feels-like-programming nature of PyTorch, in contrast to more declarative or functional frameworks, seems to be a significant factor in the popularity. Research code tends to live in the small scale where side effect laden code isn’t causing intractable problems.
+There should be Beat Saber Christmas music available only in December.
+There is probably a very visually interesting movie or game to be made by doing superhuman strength and speed with completely realistic friction, leverage, and strength of materials. It would look very distinct from existing superhero movies.
+My younger son was doing Popsicle stick catapults at school, so my mind drifts to siege machinery construction. We used these releases for a while at Armadillo Aerospace; it is interesting to see them (and their website) unchanged 15 years later.  https://www.youtube.com/embed/gy2_w6sNW5g …
+Visualization of a net learning a 2D image function with four different random start parameters. Interesting how much the character of the init remains after 1200 updates. pic.twitter.com/lRwFGD9y4Z
+Not so sure about the elevation of shallow depth of field into a sign of professionalism. There can be something of a point to it, but it smells a bit of artifact-emulation like chromatic aberration and distortion as rendering "features". https://twitter.com/GoogleAI/status/1206711812969754624 …
+Building a project that hadn't been touched in a year. Updated NDK was causing a problem with the old gradle. Update that, and there were problems in the project gradle file, Fix that, and there were deprecations in VrApi. Build issues suck the joy out of programming for me.
+When someone gets a tattoo of a game, I worry they will regret it. My gut reaction is that a few dozen levels of gameplay dont justify it, but finding that the friends, community, and slice of life associated with it have made some people happy with them two decades on is nice.
+It looks like a lot of speech analysis and synthesis work today uses Mel spectrograms, but that still parameterizes a space much larger than the plausible human vocal range. What is the minimal parameterization? Speech is an old and deep field; I could use some guidance!
+MediaFoundation is a bit awkward, but not too bad. A few lines of python gets you sort of what you want in capture, but a few hundred lines of C++ gets you exactly what you want.
+Accessing a USB camera in windows is surprisingly unclear — Video for windows? Direct show? Media foundation? CameraCapture? Video For Linux looks pleasantly straightforward!
+I remember not understanding the value of anything outside the product itself. I suggested at one point that we could sell Doom in a brown paper bag and not have any of these box and marketing discussions. It is sometimes possible to get by without, but it isn’t the best bet.
+Advertising is an important part of business — connecting people with things that could hopefully be more valuable to them than the money they part with or their default option; the non-zero-sum magic of trade.
+“Targeted advertising” is a bad word to some people, but consider the still-small VR software market — advertising a VR app indiscriminately on the web would be hopeless, but targeting “Quest owners” could be successful and positive.
+It would be nice for games like Beat Saber with separate scoreboards for each skill level to have some kind of indicator that people play on higher skills -- am I really vying with someone, or was their Expert score just a break from their real work on Expert+?
+Drifting even farther from the original intent, a project of this scope would be a good laboratory for comparing languages and coding paradigms— instead of Hello World in twenty languages, let’s see Space Invaders in 20 languages and styles.
+This is great, but it would also be nice to see versions that sacrificed memory accuracy for code readability. https://twitter.com/newsyc250/status/1202944347857129473 …
+Walking by my younger son working on his lessons, he asks “How do you spell <something>.” I start to answer, then find that he was asking Siri. Slight sense of AI replacement.
+If you achieve notoriety in the game space you will be approached by people with “revolutionary game designs”, who graciously offer to share the proceeds if you will implement it for them. It turns out that it happens with AI as well!
+It is Quake 3’s 20th Anniversary today. I still have one of the trade show launch props in my garage. pic.twitter.com/YGDnAwkmtF
+I was excited to realize that I could use custom data strides in PyTorch to make overlapped sequence histories without duplicating any memory, but while it works on cpu, gpu gives CUDA error: CUBLAS_STATUS_INVALID_VALUE when calling cublasSgemm.
+Read a little, try to build something by yourself, then go read a lot more from multiple sources now that you have some context.
+\ actually write a loop in python because I don’t know the correct way to do something with tensor ops I get reminded just how slow python is relative to C++.
+\ learning python / pytorch / jupyter and experimenting with pretrained models. I had to give myself a bit of a kick to not dwell too much in the lowest levels, but now I am enjoying the new world quite a bit. You can do a remarkable amount with very little code, but when I \
+My advice to people wanting to get into game programming has been to write small games completely from scratch while also working on commercial game mods and with unity or unreal. I’m following that myself for AI — I have some C++ backprop-from-scratch projects while also \
+Asking me for advice on getting into the gaming industry is not very valuable; I did that decades ago in a very different environment. However, explore / learn / improve cycles are pretty timeless. https://twitter.com/glassbottommeg/status/1199761889258921984 …
+Brain scanning and simulation will probably happen eventually, but I expect strong AI sooner. Let a strong AI train against a detailed life log from years of constant wear AR glasses and you get a duck typed simulation of a specific person. Likely less satisfying for most people.
+Titan RTX has Cray T90 style. pic.twitter.com/vSV9qHdAfG
+I have a couple plans to work around it. Note that the current versions isn’t at the 835 limit, we reduced the resolution for better encoder compatibility on the pc side. That will be going back up as we get more data.
+I am hoping to add a new mode that takes full advantage of USB3.1 bandwidth, but that would be months out before it could hit users.
+I constantly have to fight the urge to go do serious, deep software development on very limited retro systems where only some dozens of people would give a damn.
+“Cultivating interest” has played out well for me. When lots of things are deeply fascinating, you have the option of picking and choosing. https://twitter.com/paulg/status/1198180438583529473 …
+I tend to think that crypto mining is blazing a trail of cost optimized computation for AI to follow: https://www.asus.com/us/Motherboards/B250-MINING-EXPERT/ …
+Back in high school I learned about  https://en.m.wikipedia.org/wiki/Phineas_Gage … recovering from massive brain injury, but I more recently heard that there were people with an entire hemisphere removed, and then this case of over 75% missing: https://www.newscientist.com/article/dn12301-man-with-tiny-brain-shocks-doctors/ …
+My Beat Saber skills did not exactly transfer over, and I’m pretty new to it, so I am still using auto aim. I’m happy that there is a long skill ladder ahead to climb.
+Pistol Whip is sitting solidly as my second favorite Quest game after Beat Saber, even though the “broken graphics” aesthetic pains me a bit.
+Light is nicely spectrally seperable to RGB from a physical standpoint for rendering, but it sort of feels like for perception tasks that color might want to be treated all together with operations something like quaternions or imaginary numbers instead of as independent planes.
+I am doing a miserable job dealing with everyone reaching out to me this last week. I know how valuable personal networking is, but the hermit urge is strong.
+A nice thing about this effort is that the respect of others is completely unnecessary.
+The Arcade Learning Environment, based on the Stella 2600 emulator, is popular for reinforcement learning work. Probably doesn’t matter for agents, but I am distressed that Stella has four frames of input latency for people. pic.twitter.com/OJjtSNbYfl
+Considering how @elonmusk likened AGI to “summoning the demon”, it would be poetic if I can make a dent!
+Taking on a new challenge:  https://www.facebook.com/permalink.php?story_fbid=2547632585471243&id=100006735798590 …
+I haven’t — I mostly just play VR games these days.
+There were a couple shots in the new terminator movie where the new model, advancing with bladed arms swinging, looked like it was playing Beat Saber.
+NEON intrinsics weren't generating exactly the code that I wanted, so I went ahead and wrote some proper assembly. Keeping a .s file in the project with the maintenance headaches for a 10% performance improvement is debatable.
+Make this function faster" with SIMD is usually much harder than "make this system faster" with SIMD, and even then, SIMD isn't the first tool to reach for.
+I'm not a SIMD optimization expert. There are large bags of tricks to deal with all the problems that I just don't practice much. I usually have the option of bending everything else around it -- make everything aligned, padded, and interleaved, and SIMD code gets much easier.
+Nice to switch to an uncached target buffer and see things get faster -- the writes were spaced out enough to not stall, and now it doesn't push everything else out of the cache. I wish linux let you change caching with mprotect(); I had to alloc with ion.
+Cost effectiveness is a fundamental aspect of consumer devices, but it often leads to a virtuous circle where cheap devices are still the best available. I wonder if there is any headroom in bespoke craftsmanship for game input devices.
+As an experiment, I had a 400 page reference pdf that I am paging through a lot nicely printed out and spiral bound at FedEx. There are definitely some readability advantages over competing with everything on my monitors.
+Some of my dreams are 32 bit, while others are 64 bit. Brought to you by too much low level optimization work this past week.
+I wonder how many engineers at HBO have tried to plead the case for getting rid of the static filled intro logo that is a true worst case for compression artifacts.
+Had a reason to used std::priority_queue<> for the first time. I occasionally consider going through the standard library (or syscall interface) and writing a bit of code that uses every entry point, just to make sure I am exposed to all the options.
+Maybe stretches during the week, or by the cycle of the moon, or even by the short or long term weather. You could possibly test in a small, isolated community. (Again, I don't actually buy the daylight savings benefit, but data could counter skepticism)
+I tend to think that daylight savings time should be abolished, but if you believe the premise that there is a benefit to adjusting indicated time through the year and leaned into it, with most time coming from computers now, you could schedule continuous subtle adjustments.
+I have had vague thoughts about doing an electric conversion like this on an old British sports car: https://spectrum.ieee.org/cars-that-think/transportation/advanced-cars/an-electric-motor-that-works-in-any-classic-car …
+I was puzzled looking at a visible seam artifact in an output image. Finally realized that it was an artifact of Windows Photos tiling large images in 512x512 blocks and not doing bilinear edge support, not the image itself. Magnified in Paint it is fine.
+I wonder what M-JPEG video would look like if you temporally dithered each quantized coefficient based on the position of the true value between the available quantized ones.
+I loved the Tom Swift jr books when I was a kid, and my father had read the original Tom Swift books. I’m charmed to see a new relaunch this year with drones and VR. The original books had stunning high tech like... motorcycles and radios. https://www.amazon.com/Drone-Pursuit-Swift-Inventors-Academy/dp/1534436308/ref=sr_1_9?crid=1D2L7NEWSXNPZ&keywords=tom+swift+invention+series&qid=1571607103&sprefix=Tom+swift%2Caps%2C348&sr=8-9 …
+If you want to capture full 60/72 fps video on Go/Quest instead of half rate, you can 'adb shell setprop debug.oculus.fullRateCapture 1'
+I appreciate having legal access to high quality comic book images from  https://www.comixology.com/drm-free-backup for my various VR imaging experiments. I was just going through and completing some sets to support the titles that opted for DRM-free.
+Eric Cheng update his post on video specs for Go / Quest:  https://creator.oculus.com/blog/encoding-high-resolution-360-and-180-video-for-oculus-go/ …
+Updated 5k player / processing source and several other video experiments from me, BSD licensed:  https://developer.oculus.com/blog/techniques-for-improved-vr-video-w-john-carmack/ …
+The last time I was ranting about "smooth frame release tempo" for video, someone noted this Google doc about the issue: https://docs.google.com/document/d/1oUb_ap0TAa1sDci0wEQ6BEzd_lB7Eghv93NXyZ3952E …
+People get very excited about 3D printing technology, but I like to point out that conventional mass production processes are quite magical in their own right!
+I hardly ever do Android UI programming, so I spent an inordinately long time wondering why ALIGN_RIGHT wasn’t doing what I wanted, before I discovered ALIGN_PARENT_RIGHT.
+All my Armadillo Aerospace rockets ran Linux on PC104 systems, and it wasn't uncommon for me to do gdb/vi/make development work over WiFi between flight tests.
+Visited the Samsung HoloLab yesterday. They can capture 30 fps depth video, but I suggested they should add one extra second of footage with each light alternately strobed on individually to get a good surface BRDF capture as well. pic.twitter.com/UyAZmouoUg
+Houses and most commercial structures are not primarily optimized for minimal maintenance. What civil engineering efforts make buildings that are expected to function well even when untouched for years?
+Sometimes when I close my eyes I think I see uncorrected display mura.
+I had assumed the bottom 1x1 mip level of a texture after glGenerateMipmap was a good average of the entire texture. Not so if any of the levels have odd dimensions -- entire rows or columns are skipped. This caused some subtle issues with theater lighting. pic.twitter.com/oayC7E8wY6
+The easiest way to improve VR video quality is to offer higher bit rate streams. Many don’t even go to 20 Mbps, which 80% of the target market could use. Go to 40! Across Go and Quest Venues users: p25: 25Mbps p50: 50Mbps p75: 85Mbps
+Flash is ridiculously cheap and tiny, but of questionable long term stability. What is the state of the art for robust ROM memory for no-moving-parts, long term storage?
+Most font glyph rendering systems produce anti-aliasing with linear coverage, which is correct when in the alpha channel, but not when put directly in an sRGB color channel.
+I just put up an Expert-S on all of them. Totally legitimate office activity. https://twitter.com/BeatSaber/status/1180157033083015169 …
+This is for "low persistence display", which is crucial for VR. If it was illuminated the entire time, when you turn your head it looks like extreme motion blur, because the same pixel traces across a significant amount of space. Brief flashes are merged by your brain.
+I had a treasured Star Trek Technical Manual when I was ten. I haven't stayed current, but I am looking forward to Picard. https://twitter.com/Russellwalks/status/1179544210480889856 …
+It would be interesting to light a room solely with LED lights that could exactly mimic the duty cycles of our VR LCD backlights so we could evaluate long term comfort differences between 72 / 90 / 120 hz lighting.
+Are there any GearVR / Go apps on the store that have their full projects available on GitHub or equivalent? I will fight the good fight for binary compatibility, but going open source is even better!
+Twitter makes me smile.  https://twitter.com/FatboySlim/status/1179413700601634816 …
+It is amusing to consider what you could achieve with an "infinite" NES cart, like a modern micro controller, connected to the NES cartridge port, but still doing IO through the NES hardware. https://twitter.com/0xabad1dea/status/1168311667719057409 …
+Sure. My first few non-assembly games were in Pascal; it works just fine. You would still need some asm code for good performance, but the same code that was in C could have been in a Wirth language. Some things would be more annoying to code, but probably less bugs.
+Rift S is more comfortable, lower latency (for now; that may eventually change), doesn’t get compressed graphics, and has five-camera tracking.
+It remains an interesting thought experiment if computing had wound up more Pascal/Modula/Oberon flavored instead of C flavored.
+Apparently only is certain markets. I wonder what the usage is.
+This is the app in my app reviews session that accidentally had casting disabled, resulting in my raving about how good it looked when nobody in the room could see... https://twitter.com/luysma_es/status/1177499475301896192 …
+It would be an interesting market test if Uber offered an “electric vehicle” tab — how much more would consumers be willing to pay / wait for a zero (local) emissions ride?
+OC6: I’m doing the Oculus Start session, then I have one more meeting, then (2:30?) I will be back on the main convention floor until they kick us out.
+I got to give my @BeatSaber fan-boy suggestions directly to the team today. https://twitter.com/JaroslavBeck/status/1176956745479942144 …
+Heading off to OC6, see some of you there!
+Contemporary quote from one of your coworkers at the time went something like “Seamus is super smart, but shouldn’t be programming.”
+Do people use a “vinyl sound” filter akin to “film grain” video filters? My mind boggles at vinyl records outselling CDs now.
+Advising the shunning of a person and then not being able to provide specific reasons is not a good look.
+The @BillGates bit at the end was explicitly supposed to not be public, but I’m glad it snuck out. The magic of YouTube! https://twitter.com/TheGameVeda/status/1175442591292301312 …
+Personal networking never was my strong suit. @SeamusBlackley did get Bill to do a fun congratulatory video appearance at my game dev hall of fame induction. It has managed to stay off the internet, which is a little surprising.
+I only met Bill Gates once, but I was very impressed — I was going on about problems in the windows graphics stack, and despite it not being his expertise, I thought he “got it” faster than his domain experts in the room. https://twitter.com/paulg/status/1175373433540157440 …
+I appreciated RMS resolutely holding to his fringe positions, even when it put him well outside polite society. There is something to be said for an actually diverse spread of viewpoints.
+If you want me to review your VR app at the OC6 session, you need to follow the instructions in the session text at  https://www.oculusconnect.com/#schedule (No deep linking, sigh) to get the right account on the release channel.
+It would be interesting to give an AI agent a visualization of their internal processing state to consider while working on a task -- could they "biofeedback" in a useful way?
+Can't speak to the reboot, but those are at least in the ballpark for paid copies. The shareware distribution was much, much higher -- Microsoft had a survey that showed more copies of Doom than Windows at one point.
+I was trying to completely automate the process of building a package with my new 5k video player, but it looks like a simple raw apk isn't going to work for most videos.
+Android APK signing fails when you have > 2GB of assets, and you need to tweak java environment variables to even get that far, but there also seems to be a bug with runtime lookup of even 1.5GB assets. OBB files work, but are awkward for distribution.
+I have been talking about the consequences of the impending end of Moore's Law on performance for a while, but talking with Jim Keller (now at Intel) last weekend, he was like "Nah, we got this." and predicts lots more performance to come.
+Quest devs -- please carefully consider the use of fixed foveated rendering; the lower res areas can be quite ugly, especially if you have anything resembling text that can move into them. Try to get by with low or medium settings, and maybe drop resolution a touch if needed.
+Holding hands might be an interesting Minecraft mechanic. It would be cute seeing best friends and various mobs walking like that, but there could be consequential things like crossing otherwise random portals together or forming coven circles for magical acts. Red rover.
+Welding sparks are a fantastic demonstration of shutter angle / exposure time. From  https://www.oculus.com/experiences/quest/2586839431358655/?locale=en_US … pic.twitter.com/TyPZuTfSdy
+Nietzsche on revenge. I found this noteworthy — I am not a very empathetic person, but I also don’t seek revenge, and often don’t even notice slights or disrespect that others comment on. I never considered that it might be related. pic.twitter.com/esMcQPDurb
+Have there been any Hot-Chips level papers published on the architectures of crypto mining ASICS?
+Anyone out there to play Q3 on Dreamcast with? https://twitter.com/KimomaruNull/status/1171219806441242624 …
+Who, specifically, was doing 40 hours a week of "great work" and was let go because they weren't doing 60? Great work, not just good or passable work. Great work is valuable, and isn't the complaint about cold-hearted value maximization?
+Every video streaming app should have an indicator on their player controls of which stream is being viewed, so users can easily tell if their connection is keeping them from seeing the best quality version, or if that is just as good as the content gets.
+Evil Dead was one of the inspirations for Doom. https://twitter.com/DaveCapdevielle/status/1168958952924749824 …
+Everyone SHOULD be making 64 bit apps, but deciding to break all the existing apps that aren't (or in some cases due to needed libraries, can't) is very user-hostile.
+Someone internally suggested dropping 32 bit support on our Android based VR OS. I had harsh things to say about that.
+The fallback of running an older OS in a VM when OSX stops supporting 32 bit apps is not great, but better than nothing. I wonder if Qualcomm has virtual machines that can emulate all of their old SoC and run old software unmodified.
+Waffle House always reminds me of late night Doom and Quake dev with @_ddt__ https://twitter.com/AnniePNJ/status/1168582629467312129 …
+Just tried to follow a link to “Great discussion on Google+” only to hit the “Google+ is no longer available” page. Big sigh. Deleting all that content is really tragic.
+Whenever I see a big hunk of structural steel I consider how much more mass efficient it could be with an optimal fractal foam microstructure, but I doubt such structures would stand the test of time as well.
+Was thinking about the ones at the top of the top 500 list like Summit, not something you find in the cloud. When that level of peak performance is broadly available, I think the algorithms will follow.
+Saw some lightning today and ran the numbers — a bolt of lightning only has about $30 worth of electricity in it. I was thinking that an aluminum smelting plant might be an effective place to put lightning strikes to use, but no.
+This was the article I mentioned on the JRE. https://twitter.com/firegold21/status/1167552928158236673 …
+I tried to be explicit about it on the JRE podcast — modern games are *great* and I think very highly of the design work that goes into them. Discussing the character of older games with more limited appeal isn’t a condemnation of broad appeal!
+I don’t identify as a polymath. I can cover a lot of engineering and science ground, but I am humbled by how small of a speck of knowledge it is.
+There is no doubt in my mind that I got dealt a good genetic hand for the work I do. I am working harder as I get older to apply more process and disciple on top of general obsession with my tasks.
+I had a great time talking with @joerogan today! https://www.youtube.com/watch?v=udlMSe5-zP8 …
+Heading out to LA to do the @joerogan show tomorrow!
+An early rocket engine had the cooling channels around the throat gun-drilled in this pattern. Not exactly the shape you want, but close enough in the age before multi-axis CNC milling. https://twitter.com/Rainmaker1973/status/1166291341074194432 …
+For my archetypes at least, a scholar was involved in understanding the breadth of existing knowledge, while a scientist was actively exploring and systematizing. Reading papers versus doing experiments, both of which are rewarding.
+A while ago I considered a factorization of my drives into archetypes of engineer, craftsman, scientist, scholar, and tinkerer.
+I wonder if any interior decorators explicitly coordinate lighting and furniture placement to avoid distracting specular reflections on screens.
+The not-so-great response times of most computer programs today is market-mediated by conflicting human desires. We will eventually have AI agents driving arbitrary programs at super-human speeds; they may become software engineers out of sheer frustration with their tools.
+I still occasionally misspeak and say “Quakecon” when talking about Oculus Connect.
+Lots of people thought that inside out tracking was "solved" 5+ years ago, but the road from the ivory tower to consumer headsets was quite long and involved. https://twitter.com/oculus/status/1164539926899073024 …
+Try implementing MPEG-1 from scratch, with only the official spec as a reference, to the point you can play a Video-CD. You will learn a lot, and it is surprising how much the roots are still visible in the latest, much more complex, codecs.
+I wonder if there is any ultra high temperature convective cooling regime (pyrolitic graphite?) where the thermal conductivity of the coolant dominates, such that using molten silver as a coolant was advantageous.
+I'm reviewing my previous Oculus Connect keynotes for retrospective comments in my OC6 talk next month. I'll hit all the usual topics, but I'm open to suggestions for things you would like to hear a bit more about than fit in my usual tweet replies.
+OK, educate me! Given energy, we can desalinate ocean water or condense water out of the air. That is not cost effective versus just drilling a hole in ground in most (but not all) areas, but it puts a floor on the possible catastrophic losses and makes it an economic decision.
+Great speakers for Handmade Seattle -- @rygorous @mike_acton @tom_forsyth ! https://twitter.com/AbnerCoimbre/status/1162363383225757697 …
+The amount of C++ warning diarrhea you get from a wrong parameter on a std::thread is breathtaking. I also just learned that there is a maximum parameter count for std::thread, and the warnings were... not helpful.
+Twitter surviving until then is the riskiest bet among them, but I'm sticking my neck out!
+Name the odds you would place a bet at for "arctic ice is gone" in one of those years of your choosing -- presumably an early year, so you have some time before human civilization as we know it is gone.
+You seem to have taken the worst things you have read from multiple sources, rounded towards faster and more extreme consequences, then combined them together for a statement that is ludicrous. In 2029, not only will human existence as we know it still be here, so will Twitter.
+It seems like it would be interesting and valuable to have imagenet competition "classes" for bounded weights and/or training times (on a spec system) in addition to the current "unlimited" class. Akin to 4k and 64k demo competitions.
+A distributed system of CO sensors and box fans that supposedly replaces the need for ducted air with "sophisticated CFD calculations of airflow". I am slightly suspicious of the CFD holding across all parked car configurations.
+I like to google strange boxes of industrial infrastructure in parking garages that I can't immediately identify.
+They can round 5760 up and call it "6k" if necessary.
+Those are mobile codec limits -- only the HP can even resolve all of the 5760x2880 pixels, the other headsets are slightly wasting even some of those. Note that for immersive media, the figure of merit is "pixels per degree", not "pixels per screen", which interacts with FOV.
+Some VR video content producers are jumping to mastering at 6144x3072, or "6k". This is very likely a mistake -- 5760x2880 better matches the hardware decoder roadmaps, and if you resample down to that from 6k, quality will suffer versus mastering there.
+I wonder if modding Oculus controllers to hold a C or D cell instead of a AA might actually make them feel better with the added heft, as well as lasting many times longer.
+Interesting to consider how a full computing environment would evolve if restricted to the display characteristics of E-Ink screens with low update rates.
+I have similarly spent some brain cycles thinking about how to train a MNIST classifier on an Apple II. Complete with lo-res graphics display. https://twitter.com/textfiles/status/1157302996847464449 …
+This is great! I had always wondered about the ghost logic. I wrote a scrolling Pac-Man style game to demonstrate the Commander Keen engine for early partners at one point, but the enemy logic wasn't very interesting. https://twitter.com/notch/status/1156185221496213504 …
+Thinking about doing some exact math calculations with large vectors of integers, and I momentarily wished I had an integer overflow exception. It is a little scary considering how many unexploded bombs related to overflow there are in software today.
+I had looked for an archived copy of this article I wrote a while ago -- I'm fortunate that other people saved it! https://twitter.com/deadalnix/status/1156626997826600961 …
+Oculus Connect time again -- as always, I'm there to help! https://twitter.com/oculus/status/1156596015782227968 …
+The human visual cortex should have the equivalent of maximally activating images for conv nets, displaying them directly to specific optic nerve cells would be a more powerful activation of deeper brain neurons than any real image.
+I wonder if there is some aspect of human/computer interaction efficiency that could be boosted by directly controlling what hits the fovea regardless of gaze target, as almost the opposite of VR eye tracking — sticking to gaze (within saturation limits) vs sliding away from it.
+All obstacles are cleared and all objections are dealt with – after several years of requests, I’m finally going on the @joerogan show next month!
+Extreme YUV subsampling. https://twitter.com/Rainmaker1973/status/1155083369002229761 …
+AtomicAdd on a float looked so convenient...
+I did not appreciate how order dependent summing large lists of float32 could be without a float64 accumulator.
+I was down to just four left to be Expert-S complete across all the Beat Saber songs, and they go and release new tracks. Good timing! https://twitter.com/BeatSaber/status/1154459301009862657 …
+I didn't realize that -- I'll agitate internally!
+3/3: Not everything works, but many old apps do magically get 6DOF headset and controller tracking, as well as higher resolution and frame rate, so it is fun to dig through some old favorites.
+2/3: We will be working with developers to test against the emulator, but I hope some will be inspired enough to convert older apps to proper “hybrid” Go / Quest apps with explicit support.
+1/3: Go emulation is coming to Quest later this year, by way of a compatibility layer that makes Quest report as a Go and emulate the Go controller for old apps.
+These images look like someone used large, repeating texcoords on a 16k texture and ran out of mantissa bits. https://twitter.com/latimes/status/1153379727911948288 …
+This is for a fancy new feature that uses explicit slices to make is > 2x as efficient on the CPU. It can reliably decode 5k at CPU/GPU level 1 now.
+Trying to get x265 to behave the way I want, so looking through the source code and see: // TODO: restrict to slices boundaries I think it is time to actually do that. :-) Open source is great.
+Quest and Go have the same video codec limits, and the screens have basically the same subpixel count. I have an update for the 5k player almost ready that improves both platforms.
+I do tend to think that scale is a large part (but not all) of the challenge for AGI, so this is a big step. https://twitter.com/ilyasut/status/1153289598082015234 …
+The Henry5K player is decoding four simultaneous streams at 1080p-60 equivalent resolution and copying them to textures, then displaying them as two of the most expensive time warp layer types, and it works on an 820 for Go.
+I think higher resolution screens would be preferred by most people, allowing VR to be a general replacement for other physical screens.
+I never had to use the nextafterf() function before today:  https://linux.die.net/man/3/nextafterf … Saved me from some error prone bit operations.
+Random FF thought: There was controversy this year in the AI community when OpenAI decided not to immediately release the full results of their latest research because they wanted time to mitigate possible hazards from sharing it.  https://towardsdatascience.com/openais-gpt-2-the-model-the-hype-and-the-controversy-1109f4bfd5e8 … (cont)
+No performance hit with more features, the system is usually at the maximum tracked features, it will just choose better ones when possible. Tracking is more accurate when there are good features close to the headset. A low ceiling with patterns would be ideal.
+The first audiobook I abandoned without finishing.
+An interesting result from Facebook Reality Labs:  https://www.forrestthewoods.com/blog/measuring-the-perception-of-latency-with-a-haptic-glove/ …
+Reading “The Friendly Orange Glow” about the Plato computer system, I was surprised to see a cameo by Silas Warner, who went on to write Castle Wolfenstein on the Apple 2, and eventually met the Id Software founders at Kansas Fest, giving us his blessing for Wolfenstein 3D.
+Definitely room for improvement. If you want to try an experiment, play in an area with only indirect lighting, since visible lights can degrade the controller LED tracking sometimes.
+I spent a day at Neuralink last week, and left with my head figuratively (for now?) stuffed with exciting new information. This is very bold work. https://twitter.com/neuralink/status/1150613413736771586 …
+Oculus finally pulled the plug on Perforce for internal development, so now I have no choice but to use Mercurial. Learning new source control or build systems are among my least favorite software development tasks.
+If WASD are the most worn, it might be a negative developer productivity predictor...
+I have never changed a color scheme default in any of my dev environments, but I wouldn’t be surprised if there was a tiny positive correlation (not causation, obviously) of it with more experienced programmers. This filter bank would reject me on several axis.
+My mind still makes gaming superstitions, it just projects them onto complex basis — I worry about extended periods of continuous swooping controller motion in Beat Saber, fearing that there is a Kalman filter somewhere slowly losing the gravity vector, so I break rhythm.
+Deluxe Paint II was the pixel tool for all the early Id Software games. https://twitter.com/65816guy/status/1149493611295211520 …
+The academics that work on Racket have to pursue “language oriented programming” as the unique hook for it, which I have some misgivings about, but I still think highly of the base language and environment. https://twitter.com/newsyc250/status/1149567551958994944 …
+You mentioned restarting training recently — Beat Saber can actually be real exercise on the higher skills, and is a ton of fun!
+Keep perspective — from the source article: “Compared with the water needs of agriculture and energy production, the bottled water business is barely responsible for a trickle; in Michigan, it accounts for less than 1 percent of total water usage”
+That is my old game Catacombs! Written for 8 bit apple 2 and 16 bit 2GS, then ported to PC. The enemy movement code in Wolfenstein 3D can be traced all the way back there. https://twitter.com/textfiles/status/1148084754249637888 …
+Even before Google Maps, I remember using an early GPS that just read out lat/lon to enough digits that it felt like some magic had been squeezed out of the world. https://twitter.com/DustinHLand/status/1147750978193711104 …
+I know nothing at all about the IP, but this sounds like a pretty bold experiment. https://twitter.com/deijoubu/status/1147547473218433029 …
+It is distressing to come across a highlighted passage in a book and have no recollection of doing it.
+What are the primary sources that have led you to the conclusion that Palmer is a xenophobe? I think you have made a mistake, and tracing your thought process might be enlightening.
+In gamedev, programmers and artists are slightly insulated from random criticism because of the obvious inability of an unskilled person to do the work, but everyone thinks they can do the work of a game designer. Similarly for executives. What is the FizzBuzz filter there?
+If you made solid black contact lenses with just a tiny clear hole, then lit your room 100x brighter than normal, everything would be simultaneously in focus, regardless of depth or your prescription.
+It is strange that vector supercomputers used exclusively 64 bit float calculations for decades, while today, scientists are working out how to take advantage of even 16 bit floats on GPU systems that are millions of times faster.
+I wonder if you could construct a wound capacitor in such a way that shorting it after charging would act as a self powered coil gun.
+I had read that in the old days, pharmaceutical drug researchers had a field labeled “taste” for their experimental compound reports.
+Reading a book about Kyudo (Japanese archery) has me imagining a world where gaming didn’t advance exponentially, and the play of early, simple games accreted a layer of ritual and symbolism over the years. PacManDo. QuakeDo.
+I wish them well and hope for the best. There are, of course, many opportunities for disaster, but I’m not going to dwell on things out of my influence.
+What? 360 was fantastic to dev for! PS3 not so much.
+It was a Colorstation, not a cube. Surprisingly, there was a NeXT reseller in Madison called Imaginet that we ordered through.
+Considering recursive super-resolution as cellular automata. Among options with similar psnr, perhaps choose one that is iteratively expressive.
+Of course there is a Gameboy demoscene. https://twitter.com/ramyhg/status/1140339067399229441 …
+The use of hashing instead of set associativity in the PA-RISC caches always seemed like an interesting design point, especially since they used large external caches at that point.
+I ran across some old docs for HP PA-RISC CPUs from ‘94, which were touted as 0.8 micron fabrication. With current 10 nanometer fabrication, that means every transistor in the old CPU could now be replaced by a complete 6502 microprocessor.
+Classifying game screenshots would be an interesting machine learning dataset.
+Archiving the entire development environment is a chore; even rebuilding the same artifact that you shipped five years ago is often a challenge, to say nothing of updating it to a more modern runtime.
+I wonder if there is something at a systems / technical level that Unity or Epic could do to improve game build preservation and reproducibility. Even big studios are generally bad at being able to resurrect old codebases.
+I'm happy to see Doom still blazing new technology trails. https://twitter.com/MrPhilHarrison/status/1139208357741391873 …
+Stay tuned!
+Had my eyes dilated for a check up this morning, and the increase in peripheral flicker from 60 hz displays is huge!
+I had a fantastic time playing through it all last night! There is an extra association with VR for me -- one of the early GearVR development projects that never shipped was a music visualizer, and every time I tested, Radioactive started playing. Burned into my memory. https://twitter.com/BeatSaber/status/1138116628036456448 …
+I know you tried for years, but I also considered making an offer on the Keen IP if it was just going to be abandoned. I don't think it would have been looked on favorably, but any window of opportunity is probably closed for good now.
+In the projects-that-will-never-happen category, I have pages of notes for a semi-serious "Commander Keen -- The Next Generation" comic book plot that I toy with every now and then.
+The editorial voice of MIT Tech Review has not been what I expected. https://twitter.com/techreview/status/1137519028275154949 …
+I have improved code for the 5k player that I will release next month!
+It feels like most of the times I want to use a conditional breakpoint, the counts are so high that the slow evaluation of the breakpoint forces me to rebuild the code with a compiled in "if" statement with the test and something in the body to break on. breakHere++;
+Yes, it can get much better.
+I am very appreciative of the audience I have, and I am thankful that the discourse is almost always pleasant!
+You could ray trace it with a single ray and lower resolution over ten years ago. It is just a question of how many rays you want to throw...
+I’m personally terrible at the whole web-of-relationships thing, and I know I would be well advised to build up an actual network, but asking on Twitter seems to work out ok for me when I need something...
+I’m only 10% in, but wow, do I have a lot more touchstones with Fall by @nealstephenson than I would have had six or seven years ago — trusts, wills, lawyers, conectomes, and the webs of tech entrepreneur relationships. Things got a little dusty at the end of chapter five.
+I went searching for some comments I made about early iOS development, and while the old BethBlog site is long gone, my articles were captured in the later years of the  https://github.com/ESWAT/john-carmack-plan-archive … The internet is great!
+I pay attention to all the individual suggestions I get here, but participating in the official uservoice for Quest is definitely worthwhile:  https://oculus.uservoice.com/forums/921937-oculus-quest …
+A nice old video about our engine work for the Rocket Racing League. https://twitter.com/wikkit/status/1135307987755589632 …
+Slow progress is being made -- WebVR with multiview and compressed textures can deliver pretty good performance today, but most WebVR content doesn't do that.
+It isn't a good idea to use a resolution that high, because it would be causing aliasing away from the center and be very inefficient for a 100 degree vertical fov, so I have never calculated it exactly. Probably something like 1700x1900, but don't do it!
+Adventures in ffmpeg colorspaces  https://www.facebook.com/permalink.php?story_fbid=2413101932257643&id=100006735798590 … (Thanks @daemon404 !)
+There are more exciting things in the works, but we aren’t ready to announce them.
+60 fps display switching. Quest is currently running only at 72 fps, so 60 fps videos don’t play smoothly. Apps will be able to switch between 60/72 like Go, just with the default reversed.
+Lights out mode. You will have the option to use 3dof tracking in dark rooms, mostly for media applications.
+Dual controller input. This helps a lot when typing on the keyboard. New behavior is like Dash on PC – you get two cursors on screen, and can click with either one.
+In response to some comments here, a few in-progress Quest things that I am cleared to discuss:
+Finished "The Library Book", pulling up lots of positive memories of time in libraries as a kid. There was a >20 year period where I didn't enter a library, just buying every book I wanted, but in recent years I have made a point of visiting libraries at least whenever I travel.
+These latest enhancements are very impressive! The first level of Q2 was what I used for my original experiments in Sparse Voxel Octree ray tracing way back then -- all in software, single ray per pixel, low res, low frame rate. Progress! https://twitter.com/NVIDIAGeForce/status/1132918337321615360 …
+Of course there isn’t any support! It was a gift to the community, not a product.
+I'm pretty good at making code go fast, but I usually come away suitably humbled when I read through the disassembly of system GEMM BLAS routines.
+Thanks -- I suspected it would be easier to just add the deprecated format to libx265.c, but the "right" thing is probably to make the format converter smarter about color_range and the equivalence of some formats with it set.
+I can’t get ffmpeg to pass full range YUV to libx265. Unlike libx264, pix_fmt yuvj420p isn’t on the supported list, and a format conversion scaler is auto-inserted going from rgb or yuvj420p to yuv420p even if color_range 2 is set. Anyone got a solution? I can recompile it...
+I very nearly did that -- I got as far as decoding all the keyframes from VideoCDs as an exercise, but I didn't go the final step of dealing with the motion vector predicted frames. It would indeed be valuable!
+DM me the interaction history.
+We had a 16 CPU Origin server at Id for map processing, which replaced a 4 cpu Alpha Server.
+High end computers were boring for a long time after x86 basically killed all the old big iron, but the custom Nvidia systems feel a bit like an old Cray, and I sort of want to invent a reason to get one. https://www.nvidia.com/en-us/data-center/dgx-2/ …
+Congratulations!
+Good place to start:  https://www.amazon.com/Real-Time-Rendering-Fourth-Tomas-Akenine-Mo-ebook/dp/B07FSKB982/ref=sr_1_1_sspa?keywords=real+time+rendering&qid=1558571731&s=gateway&sr=8-1-spons&psc=1 …
+It is possible to harm companies by working against them without breaking laws, even if only in public opinion, which is the basis for most protests / etc. Giving people a financial incentive to maximize harm to a company could be destructive.
+I have very little interaction with the content curation process., but I do occasionally offer commentary for apps that have been rejected, in hopes of helping them improve. For better or worse, Quest curation is currently much more aggressive than any other Oculus product.
+I good friend from high school made some bad life decisions.
+No, there aren't currently plans to give developers access to the cameras. It might change in the future, but privacy issues are a concern.
+The tracking can coast on the IMUs for a couple seconds outside of the cameras before it drifts too much. We are still working to extend that a bit more. Not making excuses — it would be better if it worked everywhere, just explaining.
+Some adjustments are being made.
+On the other hand, the benefits of tactile controls are real, and can make it a tough trade off on physical systems where high performance is important. In a virtual environment, looking like a more effective control is only frustrating.
+I just made one of my older (before your time, Jon) internal posts about this public:  https://www.facebook.com/permalink.php?story_fbid=2407256322842204&id=100006735798590 …
+3D interfaces are usually worse than 2D interfaces.  https://www.facebook.com/permalink.php?story_fbid=2407256322842204&id=100006735798590 …
+I have found almost precisely the opposite — designers never believe me in the beginning that the most effective VR UI is a good 2D UI presented on a cylindrical layer with optimal rendering. They usually have creative visions that turn out to be ineffective.
+Considering a 3000+ character ffmpeg filter_complex command line.
+Sorry, I still don't have anything to announce about Minecraft on Go or Quest. :-(
+Happy tenth anniversary, Minecraft! It is really remarkable how it can resurrect users over and over again with updates -- my younger son is back at it again in recent weeks. I have the deepest respect for what the team continues to accomplish.
+I wonder if any worthwhile research papers have been published from an author in prison. Various novels have been, but anything academically peer reviewed? The enforced lack of many distractions could impact a certain type of people.
+It was always a testament to how good the single threaded performance was that hyperthreading could find so little free execution units to take advantage of.
+As if I wasn't busy enough right now, you go and make me want to revisit depth video, maybe integrated with the view dependent 5k work...
+I had dug up a copy of that at the office when I did the iOS port -- which, now that I think about it, was almost ten years ago...
+I have some Keloid imprinted in my brain after @JulesUrbach provided me with some immersive media samples for research purposes. https://twitter.com/MacDaffy/status/1128235675743133698 …
+Watching a @falloutboy concert in @melodyvirtual and thinking that it would be really awesome to be playing @BeatSaber to the performance.
+It is possible to make VR apps that run on both Go/GearVR and Quest, choosing to take full advantage of Quest dynamically ("hybrid" apps). It won't work out for all types of apps, but for those that can, less build targets is a really valuable thing!
+I think understanding programming is a valuable guard against magical thinking in the modern world, probably much more regularly useful than a lot of STEM fields that you aren't actively employed in.
+Building power draw is probably a decent proxy for data center utilization; I wonder how typical loads would look compared to every core and GPU running the linpack benchmark.
+It is interesting how, in a post-SpaceX world, another private company pushing things into orbit with independently developed technology seems normal. Not long ago, it was the domain of just a half dozen nation state level efforts. https://twitter.com/RocketLab/status/1126301826658136064 …
+Yeah, one might be a far * to a different code segment! Probably time to relegate that lack-of-guarantee to history, along with ones-complement and signed magnitude integers.
+Sounds worthwhile, I'll bring it up.
+TIL: MSVC has a handy feature to cause C++ captureless lambdas to decay to raw pointers by adding a + in front of the []. On clang I have to first cast to a function pointer, with a full repeat of the type signature, then cast to void *.
+Thinking about this again, but in the context of simultaneous multiplayer, either competitive or cooperative. Joust / Atari / NES can cover that, but what about one and two bit games? https://twitter.com/ID_AA_Carmack/status/977677135241363456 …
+Full code for the AI on a USB drive" sounds like a tech-illiterate movie plot device, but it probably isn't--the actual breakthrough code to manage the training and operation is likely to be quite compact. Multiple movie agents could vie to get and run it in their data centers.
+Maybe it was poor lighting, but I was unable to get Amazon’s “scan your gift card with camera” to work, and wound up typing it in. With modern computer vision, you should be able to just vaguely point the camera at it.
+Yes, Cloud Storage 2.0 for mobile is on the way! Developers need to take some steps, but it lets you move between devices and not lose progress after factory resets.
+In theory it can work over large areas, but it isn't well tested for it, so we put an upper limit on guardian sizes. There are some known challenges with mapping large areas -- we don't do loop closure on the maps yet.
+I agree, there is a tone difference between cavalier and cowboy; cavalier is "don't care", while cowboy is "Git 'er done", which is goal oriented, but can still be risk aware.
+We got a lot of grief from the peanut gallery about the way we operated, but we had a perfect safety record, including many manned rocket plane flights, while Virgin had two separate fatal incidents.
+I think the focus on approachable tooling was also a big part.
+I’m doing everything in my power.
+Sigh. Comic book (also fantasy art) archery. There was an issue of Mike Grell's Green Arrow that had him inferring the build of an assassin based on the spine of a recovered arrow, but usually the bow is a funny shaped zap gun. pic.twitter.com/qTlPvtn4W5
+Anyone in the Dallas area using physics or chemistry at work interested in doing a talk for high school kids in late May?
+Sat in a box for a decade, but is definitely nearing the end of its useful life.
+My little bit from the F8 keynote. @BeatSaber really was the most important benchmark for tracking, from my point of view! pic.twitter.com/ZXikUj9gOI
+I have often thought how much more powerful the command line would be if everything was s-expressions instead of ad-hoc white space separated parsing.
+I was in Venues for the F8 keynote talking with people until my Go battery died -- sorry to be cut off mid sentence!
+There are ML techniques that build accurate predictors even when a large fraction of the training data have errors. I think long-running fiction can be like this – we build an idealized internal version even when a lot of the canon is not very good and occasionally terrible.
+Definitely a combination of things, but lisp lost a lot of the cool feeling when it was cluttered up with type annotations (but that did expose latent bugs!).
+I was just starting to get a little creeped out with the lack of types at that scale; the idea of million line codebases without types seems deeply unsound.
+I did a packet / state relay in Racket (lisp) that was a couple thousand lines, and it was much faster to do than C++, where I am far more expert. As the cliche goes, maintenance was worse, so I added gradual typing to it. If we had to scale, I would have rewritten in C++.
+Anyone have examples of successful large scale static typed codebases that were profitably rewritten in a dynamic language? https://twitter.com/Sweet5hark/status/1120457278660988928 …
+Can anyone point to some modern academic studies of large scale software development in strongly versus weakly typed languages, like java/C#versus javascript? I have prejudices, but they aren't so strongly held that data can't move them.
+If I am being honest, I have a little bit of envy for elite demo scene skills — the raw code is laudable enough, but the style and aesthetics involved are well outside my personal scope. https://twitter.com/TheJare/status/1120263855874162689 …
+Talking with my son about sensor systems, he mistakenly said “gyrometer”, which is actually a fairly sensible name, given accelerometer, thermometer, and magnetometer as sensor types. Anyone know the etymology of gyroscope?
+I am a huge advocate of always getting a good night sleep! I can very clearly tell the difference getting even one hour less sleep. There are still over a hundred hours in the week after getting a solid 8 a night.
+Just "implementing <foo>". "From scratch" has the connotation that it almost certainly isn't the fastest path to a solution, but you will learn all the fundamental reasons why something actually works.
+I get a little irritated by "Implement <foo> from scratch with <some giant framework>" articles.
+I engage with this every couple years.  https://news.ycombinator.com/item?id=10845832 … I successfully resisted doing it with the latest Jack Ma flurry.
+From the sqlite mini-furor: https://twitter.com/ID_AA_Carmack/status/1054402475640451074 …
+If you wind up with ReLU neurons that are dead across the training set, wouldn’t it make sense to explicitly set all weights from it to zero, since any input that does trigger it is in a space that no training data covered, so the output has no learned information?
+Imagining a future Tesla that integrates a weight-on-front-suspension sensor into the traction control algorithm to just barely keep from doing a wheelie when running on slicks.
+Are there any camera systems optimized for very fast single bit per pixel readouts, with, say, microsecond frame times? Might have some fabrication benefits, and could allow digital stabilization or tracking at very high movement speeds and magnifications.
+I wonder if you could freeze a perfect crystal of a monopropellant like hydrogen peroxide, then stimulate decomposition such that the products were ejected coherently from a plane of the crystal, giving perfect thermal propulsion efficiency without a nozzle.
+I am considering this much more seriously than I should be...
+Vibrating motor haptic feedback has good frequency response, but very poor amplitude. Especially for VR, it might be interesting to have a stored energy impulse that delivered a really solid thunk, but could only do it a couple times a second.
+I’m being completionist on Beat Saber — all Expert-S before engaging with Expert+
+Whoa -- it is a natural fiber optic face plate! https://twitter.com/Rainmaker1973/status/1117160229991538689 …
+Anyone doing WebVR work, please, please do a glGenerateMipmaps() and glTexParameteri(GL_LINEAR_MIPMAP_NEAREST) after loading a texture. They are painful enough being uncompressed 32 bit textures, at least mipmap!
+There shouldn't be a hard limit, but the tech is just experimental at this point. There are some concerns about very large scale tracking maps right now, but we want to eventually make the entire world trackable!
+It might be valuable to be able to plug an arbitrary HDMI source into the HMD to view on the VR big screen. We can't take the raw HDMI signals, so it would need to compress lightly to USB. Is something like this available as a cheap dongle? https://www.razer.com/gaming-broadcaster/razer-ripsaw-hd …
+If you have an extremely unconventional idea, you will probably have to prove yourself to the world by first improving something more conventional.
+High fantasy and space opera genre fiction has grown somewhat less appealing to me as I have gotten older, but oddly, superhero stories still have almost all their pull for me. I am deeply imprinted.
+Quest doesn’t have a backlight, it is 72 hz rolling OLED. Go has a backlight with a 72 or 60 (depending on content) hz global flash.
+The supersampling layer burns a fair amount of extra power, but it lets you work with 2x higher resolution image sources without aliasing, and substantially better quality than just using mip maps, even with trilinear filtering. https://twitter.com/VRDesktop/status/1115177896602038272 …
+I don’t have any control over Doom stuff now.
+I enjoyed Void Star  https://www.amazon.com/Void-Star-Novel-Zachary-Mason-ebook/dp/B01LZUDPGV/ref=cm_cr_arp_d_product_top?ie=UTF8 …, but I was thankful for the Kindle dictionary, because there was a fair amount of obscure vocabulary in it. I noted that it had the extra chapters at the end that I always sort of wished were in the abruptly truncated Stephenson books.
+If I remember correctly, the final development effort for 3dfx was called “rampage” and had 8 texture units. Still no shaders, but highly configurable with dependent reads.
+The reason voodoo games often looked “washed out” was that they were the only company that used a linear color space instead of the typical gamma. The argument was that AA would never be right otherwise, but it was probably a net bad call (swamped by all the good ones!).
+FYI, the original GlQuake work was done on an Intergraph TDZ win NT workstation.
+One of the keys to voodoo performance was the memory backed command fifo — instead of needing to wait for a trip to complete before starting the next, thousands could be pushed without even checking.
+Linux is one of the most valuable software achievements ever, they are doing something right!
+Reading some video for linux kernel code, I shiver a little bit at the idea of millions and millions of lines of code like that all sitting together in the kernel. I am microkernel-sympathetic, but I do defend the pragmatism of the status quo.
+Couple people mentioned power consumption. A cam+screen is about a watt. Electric car is about 250 watt hours per mile. If average speed is even 8 mph, the screens would be 1/1000 the drive power, so drag reduction would be strongly net positive.
+Cameras and displays are probably cheaper than physical external mirrors on cars today, and removing the mirrors would save another hundred dollars or so in reduced air drag over the vehicle lifetime.
+Son: Hey dad, want go over regular expressions with me? Me: No, not really. (I always need a cheat sheet for the rare times I need to do anything non-trivial with RE)
+In hindsight, we could have designed anisotropic video modes to take some advantage of the increaed pixel rate of the v2200 without increasing the span count -- 1024x384, etc. I was proud of the performance we wrung out of the v1000 with the unconventional architecture! https://twitter.com/fabynou/status/1112847863833214978 …
+Of course great text can be more immersive than terrible VR for anyone with a modicum of imagination, but was there actually a a MUD in '74? What are you referring to as "green screen streaming scams"?
+It has to be tiny because of the speed of light — it doesn’t matter how fast you switch if it takes 100x longer for the signal to get to the next switch.
+Amdahl’s Law is there for everything.
+Yes, parallel is the clear path, but are there any remotely plausible technical directions (non silicon, etc) to radically faster serial computation? Something that could, at least in theory, do 100 GHz or so, even if it was grossly uneconomical? It obviously has to be tiny.
+I may wind up still technically correct, but Apple mobile single threaded performance improvements have exceeded my expectations! Specialized hardware also still offers order of magnitude improvements where applicable.
+With $100 billion to work with over five years, budget really isn’t the problem. One. Hundred. Billion. Dollars.
+I don't remember the details, but Wolf, Doom, and Quake were all licensed by hopeful VR companies back then. I didn't think any of them had a chance, it was too early.
+That fine moment when the speculative bits of an experiment demonstrate proof of life (held together by duct tape), and all that remains is old fashioned work.
+Writing in 1998 for "The Age of Spiritual Machines", Kurzweil's predictions for 2009 look reasonably close for 2019, although less widely distributed than implied. Typical optimistic programmer time estimate -- off by 2x or so.
+Sorry, no promises, but I hope so!
+Assuming a conservative 30% efficiency in conversion to electricity.
+Electricity is only about 1/3 of total energy usage, so if all transportation and heating went fully electric, it would need to be larger. We could speculate about direct fission energy conversion raising the ~30% reactor efficiency, though.
+I want to get a little ball of depleted uranium like that so I can hand it to people and say “In a breeder reactor, that would last the entire life of your child”. Of course, the decision to breed or mine is an economic one, but the physicality would be interesting.
+An average American will use about 1.2 tera-joules of electricity over an 80 year life at 2017 consumption rates. That is 50 grams, or a 1.7 cm diameter sphere, of fissile material in a conventional nuclear reactor.
+Audiobook readings are a direct source of training data for AI, but it is interesting to consider what high level abstractions could be learned from the much looser movie adaptions of books.
+That is a very fitting LCD -- the actual CRT for the TCS was never as stylistically clean as the grey scale NeXT monitors.
+No, but the arena scale Dead and Buried demo at OC5 last year showed a custom cooperative software solution to it.
+I didn't have anything directly to do with it, but Andrew and Ryan worked with me for years at Id, and definitely know what they are doing!
+The LCD on S (and Go) has lower persistence than the OLEDs in original Rift and Quest, it just doesn’t have the super high contrast.
+Letting a Neuralink volunteer train up a USB HID interface seems completely reasonable. @elonmusk https://twitter.com/ChristerEricson/status/1108516557511000064 …
+With memories of fiddling with the choke, throttle, and occasionally starter fluid on my MGB, modern cars that shutdown and restart the engine at every stoplight are impressive, but it is still a technology in its twilight.
+Many people play games on TVs with so much processing lag that the pixels might as well have been coming from a datacenter. Not everyone knows or bothers to enable game mode (sadly).
+I have been saying for a long time that game streaming has a significant future (despite working with some people still scarred from earlier failed attempts). Not necessarily for everything, but the consumer advantages are large, and we can fight the problems.
+This was actually pretty disappointing -- I spent most of that time trying neural networks and curve fitting over the history, only to find that some simple guards and ramps on extrapolation from the most recent worked better.
+I spent a couple weeks refining the 6dof extrapolation code, and the primary test was "does Beat Saber play better?" Which requires multiple runs after each change for statistical accuracy, of course.
+I know my Beat Saber leader board spots won't last a day from the consumer release, but... pic.twitter.com/6CBBYOXF7K
+(Exploring storm drains with my kids) Me: “It would be cool to have a secret escape tunnel under our house” Older son: “Escape tunnels are like starter dungeons”
+For me in an earlier generation, it was Foley and Van Dam. I was also quite pleased to eventually get an autographed copy.
+Really enjoying listening to A Short History of Nearly Everything.  https://www.audible.com/pd/A-Short-History-of-Nearly-Everything-Audiobook/B002V0KFPW?qid=1552749299&sr=1-1&ref=a_search_c3_lProduct_1_1&pf_rd_p=e81b7c27-6880-467a-b5a7-13cef5d729fe&pf_rd_r=T0H5HH3P05NGC6QGJC4M& … I’ve heard most of the stories many times, but the sweep of the growth of knowledge fills me with pride for humanity.
+Loaded on a Floppy Emu  https://www.bigmessowires.com/floppy-emu/
+Pitch Dark on my Apple //c. This is a lovely bit of retro curation.  https://archive.org/details/PitchDark … pic.twitter.com/9Nu97geLHB
+It is true, I incorrectly recalled the tenth digit of Pi. https://twitter.com/doom_txt/status/1106238987687976962 …
+I have suffered from some old-timer's suspicion about neural network solutions to rendering problems, but I am being won over with time. The "codec avatars" work from Facebook Reality Labs is very impressive: https://tech.fb.com/codec-avatars-facebook-reality-labs/ …
+I still remember in the 90's when the researcher Bruce Naylor (of BSP renown) told me he was getting out of graphics research because it wasn't very interesting anymore -- the answer was always just "cast more rays". That gave me pause. https://twitter.com/kenpex/status/1105284951237226496 …
+I wonder what the range of power consumption in mobile hardware video decoders is, from baseline H264 to everything-on-H265, and under what WiFi or cellular conditions optimizing for power would cause a bandwidth tradeoff at constant quality. Power-DASH?
+In a world with mobile keyboards, mixing random alphabetic and numeric characters for strong keys should be avoided -- just add another couple characters and stay on the same symbol page. Bonus -- no confusing 1 I and 0 O.
+I'm going to be at YC120, anyone else here going? https://blog.ycombinator.com/yc-120/
+32 bits always sounds like plenty of flags at the start.
+I am so happy when I find that past-me has left a readme.txt file for current-me with the idiosyncrasies of a project I haven't touched in a long time.
+Definitely agree. Bending a game design slightly (if necessary at all!) to not need all the performance you can get with multithreading is probably wise for most developers. Simplify the programming task, it will still be hard.
+Same process as Go
+Off topic, but I wonder what the thermal behavior of that prototype would have been if the CPU and GPU were just thermal pasted to the wall of the 20 pound aluminum enclosure...
+Few VR games are optimized enough to do it, but if you can run your game engine without multithreaded rendering, you can save a frame of latency. This matters much more for 6DOF and controllers than in 3DOF, where TimeWarp could fix most of it.
+I have very high confidence that programs will be able to match humans at the Turing Test within 50 years, but "mimic human" will be an odd game for them to play. I tend towards optimistic, but I think 50/50 we will see AGI in < 20 years.
+I am confident that artificial general intelligence will be developed. I take a little bit of pride in the fact that GPUs originally designed for first person shooter games are critical infrastructure in the research towards it.
+For a while, I had two Ferraris parked outside of a pretty low end apartment. When someone smashed one of the windows, I decided it was finally time to buy a house.
+Car talk from ten years ago at the end of the rocket post. https://twitter.com/codingfodder/status/1101959466227060744 …
+I had Roadster #30, and a P100D now.
+I had a Miata before the 328 (and an MGB before that)!
+I went 328, TR, F40, F50.... Tesla.
+Fond memories of my first Ferrari! Such a beautiful car, just a little slow... The turbocharger fixed that! https://twitter.com/archillect/status/1101952835892248577 …
+Don’t name your things “because any time you name something it becomes a bit more of a thing, and you start working for it.” — I shudder a little bit every time I hear a new code named piece of technology. Products, not technology. https://twitter.com/kenpex/status/1101644776435150848 …
+(obligatory "now APL can sound like line noise as well as look like it!" comment)
+Hearing code read aloud in an audiobook is excruciating, and largely useless. Amusing to consider optimizing code for listening -- judicious use of  https://ss64.com/bash/syntax-pronounce.html … helps, but how about sound effects, or pitch shifting for nesting depth?
+We have a lot of internal work going on with finger tracking on Quest hardware today, but it does consume a lot of additional power.
+I have not looked into Tesla's financials, but they make a *GREAT* product, which counts for a lot.
+Since I was a kid, I pronounced Niklaus Wirth’s (of pascal/Modula/Oberon) name as “worth”, but now I hear it in an audiobook as “veert”.
+I am still a proponent of position independent data that you can just mmap. Now that Oculus is supporting an OS, we might even get that for GPU data, like I have been wanting for over a decade.
+Is there is a neural network training equivalent to importance sampling in graphics -- instead of scattering effort evenly (cover every test case each epoch), spent it where it is making the most difference (favoring the highest errors)?
+One significant thing I didn't have on my radar back then was neural network denoising / image enhancement. https://twitter.com/fedyac/status/1098684136162758656 …
+Sigh. Just accidentally overwrote a file with a multi-hour computation result. Every once in a while, I consider how the VAX VMS system level file versioning would be really, really nice -- you automatically got .1, .2, .3, etc versions of files.
+On the way to school today, my younger son asked if artists get notified when you give a song a thumbs up. Obviously not practical for a hit pop song, but for obscure songs, l bet that would brighten some days... @SlackerRadio
+I never actually bought anything from them, but it was always fun looking at the exotic materials work from Ultramet. Some new things since I last looked a few years ago. https://ultramet.com
+Most things are worth revisiting once a decade or so.
+It is interesting to consider how far we could go today with deterministic hardware performance and no architectural abstraction — scratchpad memory instead of caches, delay slots instead of branch prediction, etc. https://twitter.com/andywingo/status/1097418315570577408 …
+I can hope that an Oculus Go can still be working in a decade for historical purposes, but there are definite concerns on both the software and hardware side. in contrast, I have a 30 year old Apple //c that still works fine...
+I wish all battery operated devices could work while plugged in, even if the battery was dead, but that is a tough sell at product design. My 9 year old Kindle DX finally died; I was checking It about once a year out of retro curiosity.
+I remember being baffled in my early 20's how people that failed at a company were more attractive for investment than people who hadn't yet tried, but that was naive.
+You generally have to "do some reps" to build the necessary skills to properly execute, regardless of the actual innovation you can bring to bear.
+I have always advocated cloning classic games like Space Invaders, Pac-Man, Wolfenstein 3D, etc, as an effective part of a learning strategy towards game dev mastery. I now realize that initial copycat companies can be similar for entrepreneurs.
+I got to review the first half of this book early on, before the breakdown between the author and FB comms. The things I had first hand knowledge of were accurately reported, and I learned a bunch of stuff that happened outside my view. https://www.amazon.com/History-Future-Facebook-Revolution-Virtual-ebook/dp/B01NATTA7F/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=1550165301&sr=8-1 …
+Well deserved! https://twitter.com/oculus/status/1095934189373812736 …
+There is a simulator available with source somewhere (in MAME, maybe?) that I heard 3dfx old-timers say was really good.
+So many people to deal with, my brain is sometimes blanking on names of people I have dealt with for quite a while. Not an LRU capacity miss, so I must not have enough set associativity.
+I wonder what the trade offs are for piggy backing other instruments on low orbit comm sat constellations. You aren’t going to get a Keyhole aperture, but being able to have 24/7 coverage of anywhere seems valuable. @elonmusk
+I’m busy... It does feel like a blend of Haskell and C++, which is very appealing.
+I read the ada spec a decade ago,and I was very impressed — it was the butt of jokes about design by government committee, but it looked pretty good to me...
+I haven’t written anything in it, but I like all the ideas behind it. Slightly different target than Rust with garbage collection.
+I'm still completely in the excited-newbie honeymoon phase, but writing Rust code feels very wholesome.
+This is the correct argument to make against nuclear, and it is true in many cases today. However, with cost of fuel being 1% of today's cost (and most of that not even being fissioned), there is plenty of room to change that equation.
+I challenge you to support "millions of lives affected by nuclear disasters". Emotional distress doesn't count.
+I agree. There is plenty of space to build a Black Pyramid of Death in the middle of a dessert if we have to. https://twitter.com/ssylvan/status/1093587321142706176 …
+4KB pages feel silly on a 64 bit operating system.
+Takes a very, very long time to load.
+There are tons of studies showing how critical load times are for web pages and apps, but when I try to press on optimizing load times it is too easy for people to say, "Oh yeah, what about Fortnight on mobile?"
+Or face shut off valves.
+I don't think you can say that continuing to throw money at fusion is an obvious response to climate change. There are lots of obvious vectors for fission improvement, but there remain only hopes for fusion.
+I usually discourage normal map use in mobile VR, but ASTC does have support for blocks with two uncorrelated channels. It is luminance-alpha instead of red-green format, which may need remapping for shaders. The ASTC data spec is pretty scary:  https://www.khronos.org/registry/DataFormat/specs/1.1/dataformat.1.1.html#ASTC …
+I struggle with internal arguments around how much pursuing various new things "compounds" on my current base. I hate to say "not worth my time to learn that", but on the other hand, there is a vast menu of interesting things to learn, and some are worth more than others. https://twitter.com/sama/status/1088542415848321024 …
+Phone based apps can reasonably replace cash and credit cards in some places, but are there countries where they can serve as government ID?
+Actually, almost every time I hear something excised from a song, I contemplate the strangeness of various words being deemed harmful to society and unacceptable to broadcast.
+While driving my kids to school this morning, my older son asked if the car was blanking out the bad words in a song. It was just a radio edit, but online modification is a somewhat disturbingly plausible feature for modern digital media systems.
+Engineering line of sight is better for Doc Ock than Iron Man.
+They all add value to different parts of my life.
+Reading "Bad Blood", I can't help but think that no matter how much of a trash fire Theranos may have been as a company, if they had actually developed a working technology to do rapid and reliable assays on a drop of blood, it still would have been a great thing.
+Coincidentally, I just started writing some rust... I find this sentiment strange; people don’t look to other languages because you can’t do something in c++, but more often because you can.
+I am Team Pragmatism, but in the long term, you need to not let the expedient hacks fester, or they become a net loss. Never allowing yourself to make a mess is definitely not productivity-optimal.
+Modern game software is a LOT more complicated than space software. It is also approaching similar levels of economic consequences at the high end, which is interesting -- a particularly bad crash bug could cost tens of millions of dollars.
+I have a very rewarding twitter experience! I learn something every day, and I have only had to block maybe five users in a decade.
+I was thinking that an image of the moon might be useful as a recognizable VR calibration touchpoint for a very distant object, but then I ran the numbers and realized it would only be about 8 pixels in diameter on today's displays.
+Working on it!
+Even outsourcing asset farm companies often give their developers dual 30" monitors today, which is pretty amazing -- in the (not-so-good) old days, a 20" CRT was a huge luxury. On the other hand, I am appalled at how many people develop all day on laptop screens.
+Const doesn’t help when you are writing fresh new code. It helps when you are interacting with other people’s code, or when someone else (or you, six months later) works on the code. It lets you trust that it is safe to move code or pass data as pointers.
+I bet the photons-to-photons latency of these remote piloting setups aren't even very good, which makes it extra impressive. You could make a camera-to-screen WiFi latency under a frame with aggressive pipelining, but it isn't the natural solution. https://twitter.com/JamieJBartlett/status/1087343210731618304 …
+It would be interesting to see experimental audio-only upgrades of classic games to probe how much impact can be made there, given essentially unlimited quality and diversity. Would a dynamic music soundtrack improve Pac-Man to an unbiased tester?
+Three of my media streams converged on military tech this week: Skunk Works on Kindle, Army of None: Autonomous Weapons on Audible, and Think Tank on Comixology. I first read Skunk Works before Armadillo Aerospace, the new perspective is interesting.
+I am with @sapinker on general progress, so I was skeptical about the bottom half claim. I looked up the data used for the report, and I was surprised that it is almost correct. Still, most of the world's population got wealthier.  https://www.facebook.com/permalink.php?story_fbid=2330405373860633&id=100006735798590 … https://twitter.com/AnandWrites/status/1087187676510502912 …
+At the lowest level they will both eventually be OpenXR, but that doesn't mean much, they are very divergent at the higher levels, and a lot of value would be destroyed if either was forced onto the other.
+That is definitely planned, but it is not a small amount of work, so don't hold your breath!
+I wouldn't call having to sit through the safety video "blocked", but I agree that it is annoying. I'll ping Nate about it.
+Browser is the #1 VR app. Watching video in browser, both conventional flat and 180/360/stereo immersive, is very popular.
+(on mobile -- GearVR/Go, not desktop Firefox)
+Hey, anyone that uses the Samsung or Firefox browsers in preference to the Oculus browser in VR -- what do you love there that we should be doing in our browser?
+I agree it would be a great product, and it wouldn't need any kind of a dedicated video processor.
+I actually bounced around a bit in a NASA Mars VR harness simulator -- it was neat, but shotguns and demons would have made it a lot more exciting! The consumer safety review would be... interesting.
+I almost never work more than 13 hours, but more importantly, programming has never been all that heavy on furious typing for me. I have never had a hint of wrist problems.
+TIL: Camera sensors in phones can function as radiation sensors by noting bright pixels that still occur when the lens is covered due to gamma rays going through the cover. You can calibrate and integrate for fairly accurate total dose. From "Atomic Adventures"
+Interesting to consider building a room scale VR game explicitly “backwards” from making the player look cool/graceful in real life, then figure out what the game needs to do to get them to move that way.
+Few will write a software rasterizer nowadays, but Michael Abrash’s Black Book is still filled with lots of wisdom! https://twitter.com/apgox/status/1083486828152406016 …
+There should be a Zachtronics like web "game" for optimizing real SIMD code tasks on various architectures. Give it a Shadertoy like interface for small, purely functional tasks. Companies could provide tests and sponsor prizes.
+I don't have strong feelings about it, but I almost never disable a warning, so I just go with what makes the compiler happy.
+transparent pricing" is not to be underestimated -- I can't believe how many industrial parts are still "call for quote" (or at least were seven years ago when I was buying such things).
+McMaster-Carr is awesome, but are there Chinese industrial supply houses that put it to shame? https://twitter.com/wikkit/status/1082796311705862144 …
+I do have rather fond memories of personally optimizing the ATI Rage Pro and Matrox Mesa GL drivers on Linux to run Q3 with the Utah GLX project!
+Hobby level support of Linux clients was nice at Id, but when we tried to make legitimate commercial efforts with Quake 3 and Quake Live, it was a complete failure. Mac had 10x the returns, and that was considered barely viable.
+It would be amusing to see code with an emoji font for SIMD intrinsics/asm so all the different saturating / rounding / shortening / widening / doubling / halving / element size / count / condition / etc modifiers get a little picture instead of a letter.
+Do you have any pictures of seven monitors being simultaneously driven by an Apple ][?
+ARM is doing that with a new vector extension!
+It still surprises me that CPUs don't have perfectly efficient hardwired versions of rep movs / rep stos. Highly cache and instruction optimized versions of memset / memcpy are often crazy, and it sure seems like a job for hardware.
+Yes, there are plans to have a setting to disable the controller centering dialog and allow app auto-launch, which could then be purely gaze based.
+That came from people that worked with it — I never saw the source. The results were just fine!
+It would be interesting to see some stats on length of time various people worked on different code bases — I can imagine different views from people that spend six months on something versus four years.
+Not only slow, but an innocuous single step can wind you through dozens of files and hundreds of lines of code instead of just going to the next line, even if they do all eventually get optimized out in the release build.
+I don’t remember that, but my people memory is notoriously bad, and I could have easily have missed the fact that “that guy we interviewed” turned into CliffyB. What was on your resume when you came to Id?
+Made a little GUI to allow adjusting the detail bands in my 5k video player. @racketlang was a good fit -- easy GUI code, and reading / writing the on-disk files is just a single (read) or (write x). pic.twitter.com/i6QmY8sYs1
+John von Neumann provides an excellent sense of perspective for anyone that thinks a little too highly of their own intellect. https://twitter.com/rodneyabrooks/status/1078734803321536512 …
+2400x4800 60 fps H265 (top bottom to avoid the 4096 horizontal limit on h265) plays, but not smoothly.
+There have been reports that 4800x2400 60 fps h264 videos play on Go. I thought they were just not noticing a ratty frame rate, but… I was wrong! I just checked two examples with my test code, and they play back flawlessly. I’m surprised, but I’ll take it!
+It has different defaults for the different levels, which are inferred from the size -- 5k images were sometimes causing the encoder to create motion vectors that the hardware (which isn't actually 5k certified) couldn't decode.
+If you are encoding 5k-30 videos for Go or Quest, add "-x264-params mvrange=511.75" to your ffmpeg command line to avoid some artifacts due to exceeding the motion vector range of the hardware decoder.
+Lets nominate @aras_p to the c++ standards committees! https://twitter.com/aras_p/status/1078682464602726400 …
+SpiderVerse was SO GOOD!
+My son’s D&D DM gear — dice, screen, notes, and... bullhorn for talking over a table of noisy teenagers. pic.twitter.com/7HyZfXm2nF
+I would like to see programming language revisions be data justified based on analysis of the billions of lines of available computer code. Bend to the uneven contours of the reveled programmer behavior, versus abstract theory and the whims of a few committee members.
+An enormous virtue of plain old C is that most senior developers are capable of writing their own C compiler, and knowing your tools at that level is valuable! I would need a lot of study time to write a C++ compiler. https://twitter.com/chandlerc1024/status/1078084941080973313 …
+Merry Christmas everyone! The world is full of amazing people, and the future is bright!
+The terminology of a “bug” is usually attributed to Grace Hopper in 1945, but this seems to indicate it was in airplane terminology years earlier. (From Freedom’s Forge) pic.twitter.com/sLQiAhQKeY
+We had a LiPo battery fire at Armadillo Aerospace once, but it was our own damn fault —we removed the protection circuits (better a hot battery than a non-moving valve while flying!), and we used high current power supplies for charging speed. One day the voltage was set wrong...
+Sorry to break this to you, but those are simulated images. The brief segment that was "filmed through optics" shows all the characteristic background bleed through on even the bright objects.
+Dear Angelica is now available on Go, encoded for my 5k playback.  https://www.oculus.com/experiences/go/1962660437148780 … The line art suffered a lot more at resolution boundaries, so I added an explicit blur to the low detail, feathered the transition, and faded in the dynamic resolution increases.
+Just saw the term "founder code" for the first time in this article, and it is an evocative phrase! People at Microsoft referred to " @notch code". https://programmingisterrible.com/post/139222674273/write-code-that-is-easy-to-delete-not-easy-to …
+In my headcanon, the Batmobile is a hybrid electric vehicle — the after burning turbine mostly drives a generator to keep the batteries charged, but it is still there for the occasional direct thrust >> weight requirement.
+Audible crashed while I was listening to a chapter on software reliability (in Life 3.0). It didn't repro, but I imagined how badass it would have been if they had managed to intentionally include a poison codec packet in the audio file.
+When thinking about mass production, time takes on all the physicality of mass or volume.
+Lots of wisdom, really more “animation” than “pixel art”, since it translates just fine to 3D! https://twitter.com/saint11/status/1075156941360586752 …
+Given that DRAM is a bunch of tiny capacitors, it is interesting to consider what the storage capacity of a big ultracapacitor would be if the charge was individually addressable. Sort of computronium storage.
+Sometimes I think that physical power switches would still be beneficial — The power is gone, you have 200 ms to commit some things before the cap discharges! I don’t like the lack of agency in “asking” your devices to shut down.
+VR sometimes points out how models that look fine from most views actually aren't , like couches and chairs that are the wrong scale if you slide your real-world chair on top of them.
+It really isn't too much to ask that a debugger be capable of single stepping as fast as you can press a key. Visual Studio Android debugging mostly works, but it is appallingly slow. I wonder if someone forgot to set TCP_NDELAY among other things.
+I tried to do BSP/CSG work with integer rationals way back in the Quake days. Didn’t follow all the way through, but three integer points to define planes was kind of useful.
+Doomguy
+I worked with Aaron Seeler on it -- we did a bunch of the Id ports together.
+Dreamcast was one of the nicest early consoles to develop for. https://twitter.com/fabynou/status/1072334817717600256 …
+Happy 25th Doom Anniversary! My intro for  https://www.amazon.com/Game-Engine-Black-Book-Doom/dp/1987418433 … pic.twitter.com/D4DuyoD1dD
+The freedom to be creative without the polish is a key virtue of Minecraft.
+Yes. If I had to go back in time and write Doom again, I would still use C and assembly. Writing Doom again today doesn’t really make sense.
+I’m always a little sad to see the continuous shrinking of the book selection at my local Barnes&Noble; down to about 10% of the store now.
+I argue that using your own version when everyone has std::vector is not a good idea. In extremes of performance where the std isn’t adequate, making it crystal clear by just using arrays and pointers is better than a similar looking abstraction.
+Fabian’s work is really valuable techno-archaeology; I am thankful they exist! https://twitter.com/fabynou/status/1071649008588869632 …
+It should first take steps to limit power consumption,then safely shut itself off if things are overheating. It abruptly shut down, and would not restart, even after cooling and charging? What tasks were you performing?
+Still rather proud of that!
+Because the Dallas office is so far removed from FB/Oculus HQ, I write a lot of posts to internal groups. Four years in, I can now often just dig up links to previous posts instead of explaining / arguing the same things over and over.
+I had the wrong knee-jerk reaction to this, and had to puzzle over it a bit. https://twitter.com/Kaplanyan/status/1071200586559672321 …
+We support 10 bit H265 in Quest. Not sure when 12 bit will land, but it isn't very useful without high dynamic range displays.
+4k x 4k h264 videos on Go don't work because of a very low level limit of 0xfff video macroblocks per h264 frame. We are looking into maybe just dropping that last block so you get a 16x16 black box in the corner, but you can just use h265 or 3840x3840 resolution to avoid it.
+Working out OK for me. I wouldn't say "super healthily", but above par for a programmer at 48, and still putting in the hours.
+Seeing a pack of kids share a motley collection of Chinese battery packs and adapters to keep their devices charges is pleasantly cyberpunk.
+Kind of disappointed google didn’t offer any auto complete suggestions after “amateur fission”. (I know about fusors)
+I like to think it is subtle engineering rather than luck, but it seems like a low traffic elevator I use always stops a few mm below level when you summon, and a few mm above level at destination, making it easier to roll a cart in and out.
+Upgrade a very old project to latest VrApi library., get the classic graphics developer's lament: Why the hell is the screen all black?
+Everyone should check out  https://www.oculus.com/experiences/go/1214584621926197/ … for this! I even wrote a little bit of code for Madefire, and I want to do more at some theoretical time in the future when I have more time. https://twitter.com/LiamRSharp/status/1068992661246210048 …
+Upgraded to a brand new dev system today, and... what is this? Really? About time! pic.twitter.com/TiTPscPbsb
+King of Kong probably has a pretty narrow appeal, but I enjoyed it... https://m.youtube.com/watch?v=4zhMlFOyZvQ …
+Why can't every platform just make printf() do something sensible by default? Windows goes to OutputDebugStrng, Android goes to __android_log_print, etc. Secondary functions could control details, but printf() is the portable interface.
+I think FunctionEx() is a better way to evolve an interface than setting different structure tags for the same old function.
+The arguments for and against Don’t Repeat Yourself (DRY) apply at organizational levels as well as software functional levels. Valuable to a point, but can be taken too far.
+Reading an old book on power plant engineering, and it talks about temperature in Fahrenheit, centigrade, and ... reaumur? I had literally never heard of that. 0 freezing / 80 boiling.
+These procedural ShaderToys still strike me as sorcery. My brain keeps going "Where are the textures???" https://twitter.com/iquilezles/status/1065222543433318400 …
+An enterprise config issue has thrown my machine off workplace today. That means... I can ignore everyone and program all day!
+You could write a posix-ish OS complete with FS and networking stack that can run Chrome in <100k LOC from scratch. An effort to write a google-sites compatible browser from scratch would be very educational, but I would bet money it would be several times larger.
+Sometimes the space between "not a good idea" and "is a terrible idea" is still worth exploring.
+Several people mentioned Analogue after my tweet about console ASICs. In addition to FPGA based console recreations, they also offer a milled aluminum case:  https://www.analogue.co/nt-mini/ , which is awesome!
+I wonder how power and performance efficient classic console hardware would be if it was actually implemented in today's processes instead of being painstakingly emulated on little ARM cores. Driving HDMI would take more power than running the games.
+YouTube was one of the top two apps people always ask me about for Go. There is also some progress on the other one... https://twitter.com/claybavor/status/1062079174171455489 …
+Thinking about a reactor pumped laser or nuclear flashlamp just used to illuminate existing solar panel farms when the sun is down. Much less challenging to just spray light at something nearby than traditional power beaming.
+Digging down and finding that joypad deadband adjustment is applied in the firmware, then again at the API level, and yet again at the framework level. Sigh.
+I always waste far too much time trying to think through an axis transform from sensor to game before just automating the testing of all 48 permutations and signs.
+A 30->60 fps framerate upsampler could be smarter if it knew it was working with side-by-side stereo content and used the correspondences in space as well as time, but that is a pretty niche thing to ask for.
+I wonder if the license plate scanning cameras are getting enough image recognition smarts to start identifying when the car the plate is on is not the car it is supposed to be on.
+I usually wind up passing it around a bit on flights to curious people. Last flight someone ordered one from amazon while we were still in the air!
+Reading a book from 2012 that was speculating that uranium prices were showing signs of going back up. What actually happened:  https://www.cameco.com/invest/markets/uranium-price …
+Cell phones only consume a few dollars worth of energy over their lifetime, but a GPU running at high utilization in a server farm might actually cost more in energy (direct and cooling) than in hardware over its life.
+The crap goes so deep in android development. Of course added complexity will be the only really possible mitigation, but "burn it all down" is soooo tempting.
+For an OTRAG sort of design, I strongly urge you to skip the ballute and recovery completely -- build in quantity and just expend one each launch. The recovery system adds more weight and complexity than you might think.
+A notable disadvantage of not working on the very latest chipsets or OS builds is that feeling of "That is EXACTLY the intrinsic/API call I want!" then seeing that it is #ifdef'd out for you. On the bright side, it is a sign that progress continues!
+MMAC/MHz is kind of a silly metric -- millions of multiply-accumulates per million hertz
+It is a traditional hacker skill from the early MIT days...
+Buy some real locks to try it on, generally much harder than those practice locks. I can pick padlocks, but the one time I had a real world chance to use my skills on the lock of an arcade cabinet we had lost the key to, I spent a half hour before giving up in failure.
+I'm reading through a 13653 line code file (an OMX component). It isn't clear that it would be more understandable if it was split into 20 smaller files as per conventional guidance. However, some more structural comments would help!
+The Facebook C++ code style uses two space indentation. I had never used that before (I mostly used 4-space-tabs) , and it turns out that I rather like it.
+I was searching for something I tweeted last year and there were several tweets in the results that didn't make any sense. Fooled by @Markov_Carmack !
+setsockopt takes a void* on unix and a char* on windows, but if you use a char instead of an int on unix it fails. I wasn't checking return code, so my TCP_NODELAY was off since making this code portable, causing a lot of grief.
+There should be some equivalent to "warrant canaries" for comms management. :-)
+I do intend to stay at Facebook past the launch of Oculus Quest. https://twitter.com/hmltn/status/1054434908934877184 …
+I'm an atheist, but I would be a patron of a monastic order of programmers!
+I find this both amusing and a little thought provoking, probably as intended. https://twitter.com/aras_p/status/1054395109490524160 …
+It would be interesting to have a tiny animated "power meter" on mobile devices beside the battery indicator as a modern equivalent of the old flashing HDD/Net lights. It might be some social pressure on devs to not have trivial applications doing billions of wasteful operations.
+As I was loading what must have been 1000 pounds of drinks from Costco into the back of my car, I was thinking “I bet the car oversteers now”. Then I was considering that a P100D + 1000 lb would still out accelerate a lot of the old tail-wagging 911s.
+I think we can now! Checking...
+He did, but lawyers killed the last offered time.
+I really liked our cast of characters in Quake 3, and all that Paul Steed brought to them. https://twitter.com/tryjen/status/1053058949576970240 …
+The original X-Prize was the perfect prize, and it is a damn shame that our timeline hasn't seen a flourishing of suborbital space tourism in its wake (yet). https://twitter.com/wikkit/status/1053052771056807936 …
+The new 3D depth-photos support in WebVR / Oculus Browser is a lot neater than I expected -- it is pretty compelling user generated content for VR, and a bunch of my friends are already posting them.
+I had been considering writing something along these lines myself. I'm surprised how many people are so eager to see @elonmusk brought low. I admire him. https://twitter.com/PopMech/status/1052234162818744320 …
+Idea: for static lightfields encoded as moving camera video files, rebuild so instead of using P frames predicted from the previous frame, all frames in a GOP are predicted from a "tile center", so any frame can be random accessed by just decoding its tile center and P frame.
+I'm feeling vaguely uncomfortable about making separate threads for a bunch of decoder operations that could be handled on a single thread just so I can get clear trace visualizations in systrace.
+Somewhere, someone is saying “challenge accepted”
+For me at least, immersion in a problem by continuously working on it from different angles is the best way to bring out solutions. I rarely have the "solve in the shower" solutions relative to "solve while staring at a screen".
+Expecting a significant number of your reports to want to work that much would be irrational.
+I recently fact-checked an article that said I worked "18 hour days", which was just not true -- I have never been effective beyond 13 hours, so I have never worked a 100 hour week. On the other hand, I *like* working 60 hours a week. https://twitter.com/DustinHLand/status/1051863270427164672 …
+Can I see your calculations behind that?
+At one point (after chasing NaN's from uninitialized memory) we tried default initializing our Vec3 class, and found that it made game code something like 10% slower, which was unacceptable. It can also make large image processing operations half the speed in some cases.
+Days since an uninitialized C++ variable caused me grief: 0 Uninitialized memory is sometimes important for performance, but it should need to be explicitly called out as such, rather than being the default behavior.
+I wonder if vaporizing metal in orbit could be an effective “sun shade” to reduce warming.
+A marketing hack may well be more valuable than an engineering hack in gaming today.
+I think there are solid reasons to believe that there is at least as much room for improvement in the nuclear industry as SpaceX demonstrated there was in the aerospace industry.
+I think he still makes our comms team really nervous (they don't want an @elonmusk moment!), but I bet we could make it happen now!
+That is still up to the media team, who are surely reading this very tweet. (Hi Andrea!)
+My personal legal disputes are over -- Zenimax has fully satisfied their obligations to me from the purchase of Id Software, and we have released all claims against each other. (The appeal for Oculus still goes forward)
+That is the path to getting very high quality imagery while also being very high performance. It is useful to colorize the mip levels as a development option to make sure you aren't wasting much texture density.
+It still feels like hardware for rasterizing to and sampling from unconventional layouts makes sense -- it would spend silicon to improve quality with the same bandwidth requirements. https://twitter.com/Atrix256/status/1049503544808599552 …
+Having source code easily browsed on the web is wonderful. The next step should be reproducible build systems that are just as accessible.
+It would be very inefficient, but I like thinking about a "firmware free" system that just uses a multi-core CPU and hardware that is nothing but ADC/DAC and FIFOs for all the IO from keyboards to video to raw flash arrays. Reports of buried exploits bring it to top of mind.
+There was an email in my inbox with the subject "Value in RPO", and I thought it was going to be some essay about @readyplayerone and what it means for VR, but no, it was spam about Recruitment Process Outsourcing.
+This is still generally good advice. https://twitter.com/codyowl_/status/1047490728354447360 …
+Yes,watching actual users, especially first time “tissue testers” that aren’t reused continuously, is critical! Just iterating for yourself is unlikely to hit broad appeal.
+I had heard the story a couple times about how the laughably naive old-school AI researchers had assigned “computer vision” as a summer project. It turns out it was just for a very limited “block world”, which, while still hopelessly optimistic, isn’t as silly as portrayed.
+The average velocity is probably really, really high, which is why I was wondering about protecting the reflector. Of course, many kg of something with a sub-year half life would not be pleasant...
+I wonder if you could get thrust in a vacuum by putting a radioactive material at the focus of a parabolic reflector to direct the alpha particles. Charged reflector? Moderator to reduce the particle speed?
+Levels are often the most delightful thing! On the other hand, after extensive play, competitive gaming almost becomes more like an application than a game.
+Targeting user love is different than maximizing quality.  https://www.facebook.com/permalink.php?story_fbid=2259937790907392&id=100006735798590 …
+I never actually tweeted the video link to my OC5 keynote: https://www.youtube.com/watch?v=VW6tgBcN_fA …
+Which is precisely the point — adding even one step to get to a feature drastically cuts the usage.
+That is a really excellent illustration ($9B for Google to be default search engine), I’m going to use it next time I am arguing about features not being accessible enough. https://twitter.com/TimSweeneyEpic/status/1046523065549623303 …
+We did not add any dedicated hardware to act as a PC display (it was debated a lot), but we have a research project going to see what we can do with maxing out WiFi streaming. No promises...
+Microsoft also provided the software for tracking on the MR headsets — they were first to market with a working system in HoloLens. Still, I agree that a “good enough” inside out tracking system isn’t an enormous barrier, although the details get deep!
+Few will ever care about the specific algorithms today, but the thought process is still the same.
+At OC5 a high school student asked me for advice about learning high performance programming. I don’t have a great curriculum. Home brew dev on retro platforms. Read Henessey&Patterson. @mike_acton presentations. Abrash’s Black Book. What else?
+He likes to have fun on Twitter; is that really such a bad thing? A carefully managed, PR run account could avoid some gaffes, but I think it would be a shame.
+Yes, while we could have been farther along than we are if company resources had been more focused, the misstep hasn’t turned out to be competitively damaging.
+Halo and uncharted were 1280x720 30 FPS, while VR should aim for 1280x1280x2(3d) at 72 FPS 4x MSAA trilinear, so definitely don’t expect the same graphics.
+I think about NeWS when people talk about hybrid local / remote rendering today.
+I still consider @PalmerLuckey a friend, and I wish him well.
+I still think it can happen and is worth doing, but the number of users won’t be enormous.
+Keynote stream in 20 min https://twitter.com/Mocib/status/1045344017129635841 …
+My OC5 keynote starts in one hour. VR streaming live in Venues, anyone got the conventional streaming link?
+I’m in the front row, but I considered ditching and just going to Venues from my room... https://twitter.com/amberroyVR/status/1044993605343969280 …
+As autonomous systems interact on more peer levels with people, hopefully they are exemplars of courtesy — a voice assistant that waits for just the right moment to “Excuse me...” or a self driving car that waves you in when merging. Best case, they teach by example.
+That was definitely the thing that discussions in the 70's and 80's missed -- it wasn't about reusing functions to increase programming productivity, it was about reusing entire frameworks, applications, and even systems. But it did come with drawbacks...
+That might be going a little too far. Maybe a PS1 or DS? That is at least recognizably programming from a modern point of view with C and a GPU, but still quite constrained.
+I love a good rant about how shoddy software standards are today, but a fair claim can be made that it is pretty remarkable how well things actually work. https://twitter.com/CompSciFact/status/1044596642786217985 …
+There are reasonable arguments about the level of healthcare that should be socialized, but the employer tied insurance racket is just crazy — imagine how everyone would boggle if it was suggested that auto insurance be handled that way.
+Has Intel released low level documentation for their QuickSync video codec hardware like they did for their GPUs? I was thinking that might be fun to poke at sometime as a learning project.
+Still some time to get in on the live app reviews! https://twitter.com/ID_AA_Carmack/status/1042428040029110272 …
+I ran several half marathons and tough mudders, I’m not a complete newbie! In any case, no way can I spend over an hour a day running except on the weekends.
+My entire family got into One Punch Man, so I have been doing the OPM training regimen this week. 10km run is only practical for me on weekends, but the calisthenics are a good challenge level for me. I need two sets for the push ups.
+As long as an individual has the freedom to enter agreements themselves if they don’t like the union, then fine. If they are required to participate in a union, then it isn’t exactly a “free market”.
+If you have a fast net connection, Android can take longer to install an apk than it takes to download. An optimized "install from http" would be a worthy feature. I'm a little tempted to consider it at Oculus, but really, it should be a Google job.
+I just watched (1.5x speed FTW!) my OC4 keynote to make sure I don't cover too much of the same ground next week -- https://www.youtube.com/watch?v=vlYL16-NaOw …
+I consider the power of a VR environment to let you (almost make you) focus on the task at hand as one of the principle, but underrated advantages. https://twitter.com/hbarra/status/1042782361102905344 …
+The Void VR experience is opening in Dallas this weekend!  https://www.cinemark.com/thevoid Oculus got an early show today, but I'm looking forward to going back with my son for another run.
+I thought it was fun! I always had a pretty high opinion of @BillGates so I was happy to be involved.
+That started to change when @checker came down to Dallas with WinG for the Doom port!
+This was suppressed for a long time, but eventually someone sneaked a copy out of Microsoft archives. https://twitter.com/DOOM/status/1042416180504526848 …
+Information about the John Carmack Live App Review session is now up at  https://www.oculusconnect.com/schedule day 1, with instructions on how to submit for the queue.
+The new Duke was just a warm up!
+My Oculus Connect traditional talk will be streamed live in Venues. If I can sneak away from the physical convention for a little while, I may try to spend some "hallway time" in VR in one of the other streamed sessions. https://twitter.com/oculus/status/1042035576273338369 …
+I sometimes consider how much extra value there would be in the world if we had a more efficient way to get the “optimal” person for each job, but that implies a lot more job-hopping, which prevents certain elements of wisdom from ever developing.
+You don’t actually think that is going to happen, do you?
+Texture space shading can be a powerful tool to mitigate shader aliasing. Potentially quite useful for high end PC VR and slow camera panning cinematic. https://twitter.com/ssylvan/status/1040692386140024833 …
+I made a little utility to play the unprocessed pair of .MOV files directly from Z CAM K1 Pro 180 VR cameras:  https://www.facebook.com/permalink.php?story_fbid=2250211571880014&id=100006735798590&__xts__%5B0%5D=68.ARDovydQLyScitKjewxn3uYJM2wDZyxVNDKnLDHqWEa391OLJm2sXK0uwAsOir4qWfEcDKEqoCmfuSU1PltZMQ3NJE7WbUjkmPtWl-_tfFlwe5Cf1-M1D42eV7Ze-R61EB6Oa4EJG3Hi_QspOff4vPbpzU5NrzYLCepKnSzhYjfZBjjA4UChTA&__tn__=-R …
+I consider "plurality" a cursed word, associated only with reading overreaching patent claims.
+“Expend lots of dynamic effort to determine you can (probably) turn a clock rate down” is the mobile system version of “expend lots of dynamic effort to determine you can collapse a mesh edge”. So much complexity in computing is literally counterproductive.
+Unity is the most popular engine for VR work, but I use OpenGL / C++ for my personal projects.
+(getting out of car) Younger son: “What does ‘praise’ mean’?” Me: “To say how awesome something is” Son, confused: “But why ‘praise you like a shoe???’”
+This is great, and it also struck me what an excellent skill building exercise it would have been — mastery comes through quantity of effort. https://twitter.com/WhaddupNico/status/1038669523354890240 …
+Elon is definitely an engineer. He is deeply involved with technical decisions at spacex and Tesla. He doesn’t write code or do CAD today, but he is perfectly capable of doing so.
+Thumper is great on Go! https://www.roadtovr.com/thumper-oculus-go-launch-release-date-price/ …
+I know some people feel strongly that variable name shadowing should not generate a warning, but I just wasted a non-trivial amount of time as a result of: ovrTracking2 * tracking = &tracking[displaySequence % MAX_INFLIGHT];
+My only goal was "please be better than the Super Mario Bros movie", which I think it was.
+I'll be happy to!
+There should be a GPU equivalent of TCP_CORK that prevents any execution until an explicit flush call is made.
+I was at the Seattle library, randomly browsing through 70+ year old magazines...
+I was never very interested in military history, but I recently read an editorial in a just-post-WWII army ordinance magazine by a logistics officer, and having spent a few years in a large company now, I can see a lot of relevant parallels.
+Looking out a screened window at a distant iron bar fence and feeling irritated at the aliasing.
+It pains me that the frame release tempo still isn’t very good on our streamed 360 videos, but given that, it is generally good advice to use fade in/out credits instead of scrolling credits to avoid the hand-cranked feel.
+I read both Stealing Fire and The Rise of Superman without realizing they were both by the same author (much easier to do with kindle than physical books!). I liked the earlier RoS significantly more.
+Because the speed at the top of a wheel is 2x the vehicle speed, land speed run cars should be generating shock waves there below 400 mph if exposed to free stream air. I wonder if there are any cool photographs with it visible.
+11 year old me teaching BASIC. https://twitter.com/the_cats_mum/status/1035011956040560640 …
+Was that the Norte Dame de Sion summer class? I remember helping with that a couple times. Any excuse to work on a computer!
+The Android NDK is doing something that is extremely rare for software -- it is actually getting smaller with each release! Culling architectures and unifying all the headers has been nice. 635MB for tools is still large, but it was over 1GB in r10e.
+I thought it was interesting to read for that reason, and I don’t regret the time, but it didn’t quite hit my buttons, so I don’t think I am going to continue the series.
+I wonder if you could do the equivalent of cleartype with two pairs of RGB waveguides at distributes ranges to get four effective distances — RGB... .GBR. ..BRG. ...RGB https://twitter.com/PalmerLuckey/status/1033886898920411137 …
+I noticed this in the closings of the show Limitless on Netflix in VR – the title is in a thin black font slowly scaling up on a white background, and the long stems noticeably change perceived thickness.
+Ffmpeg doesn’t do gamma correct downscaling, so reduced resolution videos will be a tiny bit darker than they should be, and high contrast animations can be subtly lumpy at the edges.
+Some of the old Armadillo Aerospace crew are hopefully launching a rocket tomorrow. https://twitter.com/Spaceport_NM/status/1033039459808305152 …
+While I'm not as strong now, I can run a lot farther and faster. Not being a serious athlete in youth allows a fitness trajectory with age that isn't strictly downhill.
+I never once had any RSI, and I don't know what I do differently than people that get it. In the larger scheme of things, I never considered programming to involve all THAT much typing...
+I hadn’t bench pressed since my early 20’s, but turning 48 I was curious how much strength I had lost. I took a few weeks to get back into it, and I am at 80% of my best lift as a 19 year old – 205 versus 255 (155 body weight). I’m pretty happy with that, all things considered.
+Interesting — one of the tricks in manufacturing large LCD panels is that microscopic spacer beads are mixed with the liquid crystal materials to maintain a precise gap distance.
+It still feels slightly magical to me that I can stop a Kindle book or Netflix show, then seamlessly pick it back up on a completely different device. Not technically hard, but decades of tech experience tend to condition you to not expect things to actually work that well.
+Shooting 180 VR with big professional cameras results in too large of an IPD, making everything seem shrunken in size. You can't put prisms in front of 180 lenses, but could you make an offset mount with prisms between the fisheye and the sensor?
+On Go, with custom experimental code. Still images from the 60 fps camera can even be zoomed in some to good effect, but we are codec limited for video. The nice thing about having an excess of source pixels is that resampling to fancy projections won't be a losing battle.
+Most immersive media master footage doesn't even reach the current VR display limits (when displayed on a TimeWarp layer), but @nextvr has shared some footage with me from their new camera that is better than anything I have ever seen.
+I have been told that naive demosaicing of Bayer filters on cameras is unacceptably low quality, but I still want to try turning raw images into independent planar textures of the proper dimensions (rotated for green) and directly sampling in the VR compositor.
+Various display technologies are color sequential, but do any modern camera systems have color wheels or other systems to get full RGB resolution without a Bayer filter?
+This old quote still pops up, but I caveat it today -- there are undeniably lots of games where the story is the entire point, and they can be done well. I do still hold that the most important games have been all about the play, not the story. https://twitter.com/TheCli3nt/status/1030507352699547648 …
+Classic OS thread spawning with just a void * encourages passing a C++ object pointer, which tends to make more state cross-thread than you need. Just passing everything as individual parameters to a std:thread, even if there are a lot, is often better.
+I just squared a cross fade last week... https://twitter.com/warrenm/status/1029063872903176192 …
+Can you if (globalThatIsFalse) instead of commenting?
+I never saw a PPC NT box, but this article says it ran the cpu in little endian mode, which makes me all the more curious why they didn't make the XBOX 360 that way: https://blogs.msdn.microsoft.com/oldnewthing/20180806-00/?p=99425 …
+I wonder if you could synchronize vibrating a camera sensor with the shutter to deliver super resolution over multiple frames. A 2x quincunx pattern at opposite ends of a sine motion seems do-able.
+It is always surprising how much code breaks when operating on a 3GB file with internal offsets that set bit 32.
+I generally agree with this for realtime applications -- you want to know about it with an assert or log if your generous mental model of how many things there are going to be is actually in error. https://twitter.com/antovsky/status/1027293116414361600 …
+I have done some significant work with that, and look forward to being able to retire the physical monitors in the future!
+3x Dell 30" 2560x1440. 4k monitors are completely wasted on my not-very-good eyesight.
+I finally moved to a triple monitor setup on my desktop. I had a tendency to cover up a window running something that takes a minute or so, get distracted, and only check back minutes later. Being able to leave everything visible helps some.
+Not being a DOTA player, it is amusing how much of the terminology is gibberish to me.  https://news.ycombinator.com/item?id=17698932 …
+Yes, those were the details I didn't know!
+I learned some Doom trivia I never knew about the sky backgrounds while proofing @fabynou upcoming Doom tech book. (The sequel to  https://www.amazon.com/Game-Engine-Black-Book-Wolfenstein-ebook/dp/B0768B3PWV/ref=sr_1_1?ie=UTF8&qid=1533600380&sr=8-1&keywords=game+engine+black+book …)
+This isn’t even that rare in reality. I try to offer constructive advice about proving themselves with mods. https://twitter.com/studioanisa/status/1026073614997762048 …
+We had this happen once when draining a tank at Armadillo Aerospace after a hydrotest. It was pretty shocking in real life, and it was sensitive enough to conditions that it didn't replicate on a later test after the tank stretched a tiny bit more. https://twitter.com/Rainmaker1973/status/1025709706600435712 …
+I miss just grinding on optimization, making the objective number better and better. It is so much more pleasant than arguing about system design issues.
+Fighting words! I'm a 6502 guy. :-) Not sure what you mean about no index registers -- you had X and Y in addition to the accumulator.
+It would be interesting to have commented high level language versions of classic Atari 2600 games. With a decent abstraction, each should fit comfortably in a single source file., and it would be nice to examine the essence of play independent of 6502/TIA architecture.
+Oculus Connect 5: I will be doing me my usual live app reviews and unscripted keynote on day 2. https://twitter.com/oculus/status/1024332490377326592 …
+Music recommendation is a case where you really do want to overfit your training data, even at the expense of generality -- every single manually marked favorite should be in the play list, even if the sample seems bizarrely out of place.
+When doing exploratory research, there is a tension around optimization. Let it run for a couple hours, our optimize it to speed up the runtime and increase experiment count, at the expense of increasing the chance that there is an implementation error.
+Anyone know how to get an Android audio/mp4a-latm MediaCodec to use 960 sample packets instead of 1024?
+It would be interesting to have some kind of massive corpus statistics on color distribution to pick the best range for chroma-key transparency for video.
+It is like popping a stack frame -- you don't set all your variables to zero before returning...
+You might be marked down for it on an exam, but not explicitly cleaning up many classes of resources and just exiting the process to let the OS do it is often completely reasonable, and the high performance thing to do. Apps that don't exit instantly get a glare.
+Nothing but good things to say about Tim! https://twitter.com/textfiles/status/1021868881605025793 …
+I still consider it isolationist if I include stb image headers...
+Lately I have been writing a lot of "isolationist code", where I avoid all utility and convenience functions that might be available outside system libraries. Somewhat bulkier, but rather pleasant.
+This applies in games -- trading off a high advance for a high royalty because you are confident you are going to sell well may leave the publisher with an argument to instead promote a similar title that they have less royalty cost on. A high advance motivates them!  https://twitter.com/nebrinkley/status/1021512724730265609 …
+While I vigorously defend the right to work harder than most people think is reasonable, this *IS* a great point. https://twitter.com/drewthaler/status/1020291139025321984 …
+I had a great time with my family at the North Texas Comic Book Show today — we came back with a pile of comics and toys, and something from almost all of the attending artists.
+Having visited Dubai is the only thing that gives me perspective on the Dallas heat now — 109 today.
+When shooting 180 VR, try to make your scene composition "V shaped", with the closer objects in the center, otherwise vertical disparity on nearby objects off to the sides will be uncomfortable.
+I like that! It is probably a good time for some soul searching if you find you are engineering "bulletproof shoes" to combat shooting yourself in the foot. https://twitter.com/morakdais/status/1019962022971236352 …
+I try to keep a positive attitude -- I cheer when we don't pull the trigger after carefully aiming at our foot.
+Every year now, I wistfully think about how fun it would be to just show up at #A2KFest with some brand new 8 bit code. I know I don't have time to do a real project, but maybe just a demo...
+Many of Rich's observations in the surrounding hundred+ tweets seem overly cynical (granted, my viewpoint would be conductive to naivete), but early Id Software days of massive bonuses did cause some pathologies that even socially-oblivious-me could notice. https://twitter.com/richgel999/status/1018435389780979713 …
+Heard a rule of thumb today: 100 mW of power per GB/s of main memory traffic in a modern SoC. That seems plausible, but does anyone have pointers to surveys of measured data?
+You cannot (and will never be able to) generate a mipmap directly on a video texture. To get mipmaps you will always have to copy to a conventional texture. On the bright side, that is your opportunity to go to an sRGB texture (by disabling srgb encode on the FB when copying).
+This is great! Datasets drive research; having a modern production asset in hackable form is going to pay dividends. https://twitter.com/aras_p/status/1018904797641101313 …
+Thanks for the insider view on this! I am still very often drawn by the lure of "rewrite it all".
+I can’t tell if this was sarcasm or an honest attempt to explain data locality to Mike Acton.
+I had 10k go away, or about 1.2%. When I heard about it, I was thinking that it wouldn’t be shocking to see 100k+ go away, but it would probably be a PR nightmare for Twitter to cull at that level.
+We got tired of traveling out to the warehouse to fill up carboys, so we got our own containment facilities on-site, and never had a problem. I still have some fondness for hydrogen peroxide, but not so much for catalyst beds.
+We did shortly after have an issue where they called us and said “Uh, your drum is leaking liquid out of the top”. Turned out that the factory had let a little peroxide get between the drum and liner, so as it decomposed it squeezed the liner like a toothpaste tube.
+Reading this in a hotel reminds me how, at the very start of Armadillo Aerospace, we stored a drum of rocket grade peroxide at a chemical warehouse. I was in CA visiting Nvidia, and national news reported a fire at a Dallas chemical warehouse. Had a bad feeling it was us(wasn’t). https://twitter.com/sixthtone/status/1017624675076198401 …
+Are you talking about the chromatic bleed? There is a real fix coming for Go, but the workaround for now is have a dark colored border in the overlay if it is anywhere near the edge of the view.
+I wish there was a call like glClear() that operated on integer framebuffer coordinates, but ran a fragment program with implicit attributes.
+The language is fine, and you can basically write code like C with less undefined behaviors if you don't want to go full enterprise-java culture.
+Sigh. This is the second time I have spent a couple hours writing new C++ code, only to be reminded that AMediaCodec_createInputSurface() isn't available in Android N, and I have to rewrite some of it in Java.
+I can't give a date, but I think progress is being made. I care a lot about getting it!
+I find that 3 mile runs are just fine, and may even be beneficial for work that day, but 7 mile runs leave me less productive the rest of the day.
+It is coming along well.
+I often have trouble finding tweets that I saw even a few days ago. Twitter should offer a search option for only the tweets you have actually seen — put that data collection to good use!
+4th of July thoughts from some years ago:  https://www.facebook.com/permalink.php?story_fbid=2181903482044157&id=100006735798590 …
+User value is more important. By most graphics definitions, the original Doom was far from "correct", but performance alone is worthless if it isn't doing what you want.
+In addition to the modern consoles, we have a classic arcade cocktail table at home. I was amused last night when my son said "Hey dad, want to play some Overwatch? Or some Mappy?" The old games are still fun!
+To get a baseline, I played various content with forced linear filtering and no mipmaps, and I find that most 1920x1080 content doesn't really have much of any detail getting lost when only sampling at 1280x720. Need to start with some BluRay quality footage.
+I want to do a super high quality dynamic resampling of 1920x1080 video content for VR -- fwidth based filter kernel on Y in distortion space and address the 4:2:0 UV directly.
+A new Craddock book in the works: https://www.kickstarter.com/projects/davidlcraddock/stay-awhile-and-listen-book-ii …
+Not yet
+I mentioned in my BAFTA acceptance how I thought I was born a few years too late and missed out on being a part of the golden age of the Apple II. https://www.youtube.com/watch?v=fyjJrF2gJ34 …
+The Wikipedia animations for bezier curves are nice:  https://en.wikipedia.org/wiki/B%C3%A9zier_curve …
+I played a test version of this last week, and it was a fun experience! One person is the active agent in VR, and another person on a cell phone is the "guy in the chair", warning about guards and hacking systems. https://twitter.com/oculus/status/1011612128397049856 …
+I have always found the idea of the Clock of The Long Now intriguing from an engineering standpoint, but other less epic durability challenges also present themselves -- how about an air conditioner that works for 100 years without failing?
+That is not officially supported, but I'm happy about it!
+We debated this — it is possible, but I don’t think it would have enough games and users to justify it.
+Things took a turn for the worse with Quake.
+I hate the entire interviewing process — I don’t feel I am any good at judging someone in an hour. If you have the luxury of not minding lots of false negatives, people that can nail the tricky questions are likely smart.
+Oculus Dallas open house — blocking the vis like a level with perf problems. pic.twitter.com/cqNnOzFlrC
+I heard today that NULL on old Cray systems was -1.
+Nope. Tried it.
+No, it rolls out on a schedule so we can see if something is blowing up before it hits everyone.
+There is an update to the code download for the 5k player:  https://developer.oculus.com/blog/behind-the-tech-with-john-carmack-5k-immersive-video/ …
+Not in the update rolling out now, but hopefully the next one.
+Thanks, I'll get the package updated. I apologize for releasing it broken!
+If you already have the mp4, you can just do -build. Let me know if it works, and I'll update the official package. https://twitter.com/ID_AA_Carmack/status/1009476830859071488 …
+Try this version: https://www.dropbox.com/s/6my7i6315cbi84p/videostrip.exe?dl=0 …
+Oh shoot -- that was test code when I was working on the slice splicing, and shouldn't be there!
+You can pair some of them through the companion app, but the little USB dongles for wireless keyboards should always work.
+For some reason, I had avoided Ian Banks’ books, but I finally started reading Player of Games, and I’m finding it remarkably good.
+I did some work on that. The problem is that chromatic aberration correction isn't accurate to 1/3 of a pixel, and moves around more than that depending on how you settle it on your face.
+You can run the real 6DOF Henry on Rift! 360 videos are vocally hated by a lot of Rift/Vive users, and 90 fps is problematic, so it hasn't been a priority.
+All 3D 360 videos lack stereo at the poles, it is necessary to fade it out or your eyes try to go backwards when you look past the pole. Depth augmented videos can do it "right", but they have their own issues, and are more expensive to render.
+There is a hacker news for this that I will be checking if anyone wants clarifications:  https://news.ycombinator.com/item?id=17348327#17348476 …
+I am doing some minimum-power explorations around video playing. There is definitely a fair amount of overhead through Android, but I'm not sure yet what fraction of battery life can be attributed to it.
+Here is the blog and code for my 5k video player: https://twitter.com/Oculus_Dev/status/1009108062483828736 …
+It is on the roadmap!
+I want to give all the Felix&Paul productions the 5k treatment!
+I strive to provide the best canvas for the artists to work on!
+Yes, if you turn your head fast enough, especially on an app not holding framerate, you can bring blockier edges towards the center of the view.
+It is a little unfortunate that "aliasing" has come to be used to cover a broad range of sampling artifacts when it is probably more properly used just for repeating waves. Is there a better term?
+After doing convoluted external work to test frame interleaved 3d video, I find that ffmpeg can convert between interleaved and top / bottom or side by side formats with a simple command line parameter.
+I have thought about it, and they should work well, and be rather interesting. The simple solution is to just always fade to black.
+Yes, probably 20+ years ago, but still true!
+You should never do a cross-fade in a stereoscopic production, because your eyes can't converge on the blended intermediate values.
+Incredibles 2 was great!
+Self driving cars should have visible display panels to wave a go-ahead to anxious pedestrians at street crossings, or even to make “eye contact” to signal they are aware of you.
+Wait — what? A tv series?
+Did you log out of the oculus app on your phone or change accounts? There was a problem that this triggered. If so, try logging back in and finishing the tutorial.
+All 360 3D movies have to ramp down the depth effect near the poles, otherwise your eyes go backward when you see “the other side”. That you could tell it was like a bowl is quite observant — most just say “weird”.
+Even in the scope of well understood, fungible work there are > 3x differences. When work is novel, the gaps can extend all the way to infinity, because many people would not be able to complete it at all.
+Normal omni-stereo lack of depth on the floor (and ceiling), which is part of my justification for only having high res in the middle. Tools out next week, I hope.
+Hopefully tool and player source will be out in the next week or so.
+It would be confusing in the store right now. If peak quality immersive video looks like a platform driver, maybe we could add some kind of option.
+The 5760x5760 master is 7.8 GB. The dynamic 5k at CRF 18 is 2.3 GB.
+This is encoded at CRF 22 to keep the size down to 1.3 GB for reasonable download size. If you were building for location based use, I would use a good bit more bitrate.
+My dynamic 5k encoding of Henry is available now: https://www.oculus.com/experiences/gear-vr/2084588764916379/ …
+For many maneuvers, it will probably be optimal to have the rockets pushing somewhat downward to increase tire grip, within the limits of the suspension, as well as actually accelerating the vehicle mass.
+So you used one phone / account to set up 20 Go's, but half of them don't wind up completing the setup process? Let's try to get to the bottom of it, but as a workaround you might try using a second phone with a different account.
+Censorship is a loaded word that can be argued doesn't apply to commercial platforms, but I support Valve in having an uncurated platform. There are plenty of more-or-less carefully curated platforms to choose from; I think having one with explicitly near-zero curation is good.  https://twitter.com/br/status/1004635621481177088 …
+That’s neat! I remember in the 80’s there was an MTV contest for a homemade video, and I thought about what I might be able to do on an Apple ][, but I didn’t come up with anything worthwhile.
+The last time Trent toured through Dallas I showed him Secret VR Stuff. (GearVR before release) I have nudged a couple times about how he should make a VR music video. https://twitter.com/slugvile/status/1004471860749393920 …
+We are working on it!
+Driving in, I had a Go in the other seat. At a stoplight I noticed it had moved, and it was in the sun, lenses up. I thought "Crap, did I sunburn the display?", and quickly put it on to check (no). That must have looked rather strange from the car next to me!
+I wonder if it is possible to make a black felt light blocker that attaches around something like this and just drapes on the face for comfortable complete immersion, but can be taken off for productivity or situational awareness.
+Want to sell me one? ( @PalmerLuckey flashback!)
+We hear you on both counts!
+See you there! https://twitter.com/Oculus_Dev/status/1004052948614373376 …
+Is this a halo strap rig? Do you have a top view pic?
+I working on a Remote Desktop app.
+Damning with faint praise. :-) Headsets can and should get much smaller and lighter!
+It turns out that some can be paired through our existing controller support in the companion app, even though they aren't "controllers". The little USB wireless dongles for keyboard / mouse are the safer bet.
+Go is a nicely “physically hackable” system. I trimmed the facial interface on my normal Go a little bit around the nose pocket, and we have cut away the entire bottom of some headsets so you can use a mouse and keyboard with them. pic.twitter.com/q8GN6jbYHL
+Anyone have pointers to documentation on the MacOS extensions to the remote framebuffer protocol?
+It is a high priority for sure! It will still face the problem that relatively few people will pair joypads.
+This is s good thread: https://twitter.com/alexqgb/status/1001999443300843521?s=21 …
+I certainly wish we had a Mario or Zelda class game on the platform (I would port it myself if Nintendo wanted!) but people seem to be finding value with the slate of apps we do have, and we will continue to improve.
+Don’t put it off, start now! I’m serious — close the browser and go jog around the block a few times. I use MapMyRun for time and distance tracking, you might find it useful.
+When I finish a summer morning jog I have a ghostly after image of pac man in my left eye from the sun’s disc interrupted by the edge of my glasses.
+Most of the design cleverness was my wife’s doing, but I was proud of the “platform appropriate” technology that I built for it. Working within tight limits is rewarding! https://twitter.com/davidedwardc/status/1002762676290744321 …
+Anyone touting 8k video on VR headsets has an immediate credibility problem, because any pixels above 5k are beyond the display resolution, and actually detrimental due to increased aliasing.
+Along Together is great! Turbo Button has now gone through several generations of VR game development, and they are hitting lots of subtle but important points. https://twitter.com/TurboButtonInc/status/998620584203272192 …
+They are all prefiltered 1280 ASTC cube maps. They could have been 1536, but they would take longer to download. We wanted to make them extremely power efficient, so used 8 bit ASTC instead of 32 bit jpeg that compresses better.
+Great thread! https://twitter.com/alexqgb/status/1001999443300843521 …
+First event tonight. I'll be in the crowd. https://twitter.com/oculus/status/1001856768803332097 …
+Would be interesting to do for game play throughs. Yes, Quake would be all brown and grey. https://twitter.com/rainmaker1973/status/1001766405644091392 …
+I am not the biggest booster, for the predictable reason that I like fewer layers of abstraction between me and the system, but I'm sure it will be important for many of the reasons that the web in general is important.
+A more-serious suggestion for a sports app is to use the camera to measure pitching speed and other values. Probably worth a few dollars to a lot of kids/parents/coaches. Not trivial to do to high accuracy, but standard ball size makes plausible.
+Phone app idea: use accelerometers to measure impact on a punching bag with phone strapped to back side. Perhaps viable spectrum from consumer party game to proper training tool. Some obvious failure modes...
+Id Software briefly considered moving to a tropical island after six months in Wisconsin, but one of the founders couldn’t swim and didn’t like planes, so an island was rejected.
+In the old days of tube based computers, were larger assemblies, like a complete register, ever put in a single vacuum enclosure to increase density, or was individual replacement for burnout always the dominant factor?
+There was a brief period when I was at Id where I had some half-baked plans for a new Keen iOS platformer, but I never had the time.
+It is interesting that state of the art image recognition networks with 100+ layers are much deeper than neural latencies imply are used by the brain for the same tasks.
+It is a custom format. I hope to release tools and code after everything gets proven out.
+At these resolutions it also becomes more important to use an sRGB texture and framebuffer, or you can get aliasing around high contrast edges, like credits text even if the resolutions and mip maps are right.
+5120 wide equirects are perfectly matched to the display. Lots of pixels wasted at the poles, which is why I don't feel bad about not taking most of those pixels.
+Henry pretty much maxed out a 1080 GPU, that isn't going to run on mobile with anything resembling the same quality.
+Yes, Unreal on PC, but there is also a captured-to-video with audio post production version available.
+This is pretty specialized, and I wouldn't want to throw all of Unity on top of it.
+Basically, it makes a 2k x 2k baseline, then extracts the core 5k x 2k section (1k from each eye) and cuts it into 10 segments, of which only three plus the baseline are decoded at one time. Vsync locked frame release + low latency fast-path Audio 360 spatialization.
+We are going to do a re-release of Story Studio's Henry with my new video playback tech that lets us play a 5k x 5k 60 fps video on Go and newer GearVRs. It will be a big download, but it will set a new bar for immersive video quality.
+I do wish Netflix could resume in the EXACT spot you were in, instead of forcing you to quickly tap through profile and resume-watching, but it is still pretty great!
+Automatic child thread naming. https://twitter.com/casseveritt/status/999625955659436032 …
+Spawned threads inheriting the posix thread name by default is likely net positive, but it can sometimes lead to you chasing your tail wondering why your thread has gone rogue in systrace when it wasn’t your thread at all.
+As a libertarian, I am generally not enthusiastic about broad new regulatory regimes, but I can't help but smile at all the desperate PLEASE-opt-in emails from annoying spammers that are landing in my inbox as a result of GDPR.
+Driving to work, a couple cars ahead of me was a truck with a prominent 256 on the back, and I had a very odd sense that I was in the Matrix, and should follow it. Opportunity missed?
+We have a couple hundred open positions at Oculus, across a number of sites around the world:  https://www.oculus.com/careers/
+It is inappropriate to have 30 seconds of logos in front of a sub-ten minute immersive video.
+I wonder how much industrial espionage is done by infiltrated cleaning crews plugging devices in to idle machines in empty offices on Sundays.
+I never watched that!
+My wife loved that shirt, and packed it away so I wouldn't wear it out. Still in a box somewhere!
+Another Carmack / Steve Jobs story from @thatjimblack  https://www.facebook.com/JamesHBlack/posts/10156560054277932 …
+Even in a vacuum they lose power in days-not-weeks, but I realized that you could "stage" them like rockets for longer outages -- the first one keeps the others at optimal RPM until it is depleted, then the next takes over, and so on.
+I always liked the idea of maglev flywheel energy storage for a Mad Scientist bunker, because unlike batteries, you could imagine them functioning, at least in theory, for centuries with intermittent power.
+A non-Facebook copy of the text on Hacker News:  https://news.ycombinator.com/item?id=17067129 …
+My Steve Jobs stories:  https://www.facebook.com/permalink.php?story_fbid=2146412825593223&id=100006735798590 …
+I’m hoping the experience of using it for business purposes gets better in the coming year!
+I put that there :-) The feature is behind a gatekeeper, but I think we will make it at least an option for anyone soon.
+Despite the occasional misstep, I really like auto code format on check in -- remove things that just don't matter much from your cares. I almost wish it could do the same with name casing...
+Saw a reference to "community (safety, friending, sharing)" and I initially read it as "shaming", which is unfortunately not quite as implausible as it would have been a decade ago. #Orwell
+To get started, watch a Cirque Du Soleil show, look at the 3D 360 photos, watch some Netflix, play Lands End and Daedalus.
+We are definitely working on VR180 support, I'll check on the browser side.
+I love that free navigation is showing up more. I always considered that one of the core virtues of VR, and the strong recommendation for stationary experiences in the name of comfort was a self-inflicted wound. https://twitter.com/cybereality/status/993883261553332226 …
+Go dev note: you need to register at Oculus as a developer to enable ADB, but once you do, you do not need to use osig files likes you did on GearVR.
+To look decent in-game, make sure that all text is drawn to a texture, has mipmaps generated, use trilinear filtering, and enable anisotropic filtering for the platforms that allow it. sRGB is step two, but harder for some game to handle.
+I have some really great code that I have been calling "VideoDirect" that it looks like we will be releasing as a sample app!
+Select your device, More Settings, Unlock Pattern. I fought hard to not make that the default option, but maybe it got buried a little too much...
+Cool! https://twitter.com/firagabird/status/993628797231448064 …
+Cameras don't grow on trees!
+Use a TimeWarp layer is the biggest one. Scale it so it just barely upscales, then treat every pixel as important -- dump your layers and look at them zoomed in on a paint program. The second most important tip is to use sRGB framebuffers and layers.
+Go should be a really interesting headset for hardware mods, being self contained and not requiring any precision calibrated camera or sensor mounts (just the main IMU). I expect to see some ergonomic innovations from the community!
+I think about this pair of tweets often. I am happy to help people on the path of learning, but I am not inclined (or skilled) at actually "teaching". Not sure if it is a consequence of being mostly self taught, or a predisposition. https://twitter.com/tom_forsyth/status/939380080559529985 …
+I think it is — I enable CAC on the oculus video screen, and that should be the same path. The fringe on the very edge is an issue with composition, but I can fix that case on Go with a Qualcomm extension.
+A reminder that one of these days, I need to write up my “Steve Jobs stories”... https://twitter.com/jeffbax/status/993137095765000192 …
+Things are definitely “acceptable”, but they can be better. Just like control latency in games, some people may not care at all about an extra 100 ms, but it makes a difference to most people, even if they can’t articulate it.
+No, and it is a good example of the failure of Gaussian modeling for some systems. It isn’t a matter of multiple independent effects.
+Yes, but the variance of UDP packet delivery times can sometimes be quite alarming.
+60 fps is easy, 16 milliseconds latency is basically impossible. The saving grace is that most games today have 100+ milliseconds of total control lag, so it might be possible to make it up elsewhere.
+I made a long internal post yesterday about audio latency, and it included “Many people reading this are too young to remember analog local phone calls, and how the lag from cell phones changed conversations.”
+It feels like there would be some win in going full deep learning on the voip dropped packet mitigation problem — train up on terabytes of conversation, then be able to predict the next 100 ms or so of a voice stream if packets don’t arrive.
+I haven’t heard that discussed, I’ll bring it up. Glad you are enjoying Go!
+These are all "VrShell panel apps". We intend to have a public SDK for it, but don't have a timetable.
+I just played through the update over two sessions, it really is a beautiful experience. Make more, please!
+adb setprop debug.oculus.forceChroma -1 = application's choice (default) 1 = force on 0 = force off Note that with multiple TimeWarp layers, CAC will introduce artifacts at blended edges because there is only one alpha value for the three different colors.
+During initial struggles to build chromium for WebVR development work: @abolgar “I thought Unreal was a big codebase...”
+The depth of the web stack still makes me a bit queasy for mobile VR, but it would be unwise to bet against it! https://twitter.com/tojiro/status/992290865845436421 …
+Land's End got an update for Go! This was one of the best first gen GearVR titles. https://www.oculus.com/experiences/gear-vr/940410229366998/ …
+Adding it as an option to the void theater mode would be easy, but it would need work on the 3D scene.
+It would have to go well off both edges of the screen to actually show the individual pixels without aliasing.
+We are working to get that all unified with recording / casting / live, but it is still a little ways off, so the recordings still don't have audio.
+Probably easier to distribute a sample program that could be customized than add a feature into the main program. I might even be able to justify doing that sometime...
+I write my little one-offs in @racketlang
+Sure. More likely to get integrated into the existing display controllers. If only there was a channel mask available, I could do it on the existing chips...
+You can certainly make an app to do that, but the first party video player doesn't have any kind of remote trigger capability.
+It uses the front plate as a heat sink / spreader, which helps a lot. Also helps to not have random carrier applications running in the background.
+I agree -- I personally want that.
+I made a demo of that, but it will take a little while to get it integrated into the companion app.
+Recorded video files should show up when you plug into a pc and choose “allow” in the headset. casting is coming.
+It should give 3+ hours of media viewing, 2 hrs of gaming. It works fine with a charging cable attached, the included one is just pretty short.
+Controller support, cursor depth exactly on screen, 72 fps support on Go, don't swapinterval 2 on Gear, sRGB filtering, chromatic aberration correction, fixed bug with mip maps on scene when dynamic lighting, fixed bug with subtitles disappearing early,
+I would be happy to help -- you definitely want to get onto an sRGB time warp layer! 1080p remote desktop res doesn't make sense for any current headsets, you should resize on the host to 720p.
+That is basically what I did for Netflix and Oculus Video. GlGenerateMipmap is pretty efficient. If you use fully baked (and compressed) texture lighting instead of texture + lightmap, you can trade download time and space for runtime performance.
+Lots of GearVR app updates also just went live with Go launch, including a Netflix update that I added several good quality improvements to!
+We didn't! We support 72hz update rate for apps that opt-in (20% more performance cost to deal with). The core Oculus shell runs a 72, but seamlessly switches to 60 when playing 30 or 60 hz media to avoid frame judder.
+Same store. Most GearVR apps run unmodified and can be found in the store, but updated apps are being featured. Purchases on GearVR are respected on Go.
+It runs all by itself, you just need to use a companion app on a cell phone to do the initial login and controller pairing setup. In the future we will probably make it possible to do the setup without a phone at all.
+Hey, you can buy an Oculus Go now! https://twitter.com/oculus/status/991370941811888128 …
+By default, Android destroys and recreates the entire activity on an orientation change. That avoids a lot of apps messing up state management, but is slow. Apps can flag in the manifest that they can handle it themselves.
+Android event processing overhead is less than I feared -- generally around 1.5 milliseconds. Not worth any heroic hacking to bypass. pic.twitter.com/AZlDwqtrqC
+However, market forces definitely do server to direct creativity. Many people have a broad menu of things that they would find equally fulfilling to pursue, and I would argue that letting the market influence the decision is beneficial to society.
+Note that I said “adding” — changing to a completely new tool and ceasing to use an old one is often how progress is made. Using multiple tools has an aggregation tax that can overwhelm the incremental positives.
+The right tool for the job is often the tool you are already using -- adding new tools has a higher cost than many people appreciate.
+Our SDK VR project build process is a hellscape of windows batch, python, gradle, and NDK make. I can only blame about half of it on Android.
+While dogfooding new headsets I often abandon games when my position is lost after a full user partition wipe, but I still like playing Daedalus  https://www.oculus.com/experiences/gear-vr/1246280708824029/ … and Smash Hit  https://www.oculus.com/experiences/gear-vr/942006482530009/ … over and over.
+NDKMediaExtractor does not like me giving it a file with 11 video tracks.
+I'm pretty comfortable with the idea that we are almost out of the exponential scaling world, but memory is the area most likely to carry on for a while. Probably not "core", but maybe some kind of 3D storage structure...
+Considering the Lindy effect  https://en.m.wikipedia.org/wiki/Lindy_effect … , it would be interesting to see a list of in-print computer books sorted by date of (first edition) publication. Knuth, Mythical Man Month, etc.
+I think I have a vague recollection of that...
+I’m finding the recent splutteringly disdainful articles oddly amusing.
+Don't burn any bridges unless enemies are chasing you across them!
+Did you try a sabbatical or any other kind of cool-down?
+There are large classes of work that I can do when I'm a bit sick, but @casseveritt just asked me to review some lockless synchronization code, and I'm not touching it.
